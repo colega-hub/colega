@@ -1,0 +1,669 @@
+{
+  "meta": {
+    "home": {
+      "title": "Colega — Just work. Colega keeps up.",
+      "description": "Colega is a desktop companion that follows your context when you share your screen, remembers what matters, and steps in when something deserves your attention."
+    },
+    "login": {
+      "title": "Log in — Colega",
+      "description": "Log in to your Colega account."
+    },
+    "signup": {
+      "title": "Sign up — Colega",
+      "description": "Create your Colega account and get set up in less than a minute."
+    },
+    "pricing": {
+      "title": "Pricing — Colega",
+      "description": "Simple, transparent pricing for individuals and teams using Colega."
+    },
+    "download": {
+      "title": "Download — Colega",
+      "description": "Download Colega for Windows or Mac."
+    },
+    "privacy": {
+      "title": "Privacy Policy — Colega",
+      "description": "How Colega collects, uses, and protects your data."
+    },
+    "terms": {
+      "title": "Terms of Service — Colega",
+      "description": "The terms that govern your use of Colega."
+    },
+    "contact": {
+      "title": "Contact — Colega",
+      "description": "Get in touch with the Colega team."
+    },
+    "forgotPassword": {
+      "title": "Forgot password — Colega",
+      "description": "Reset the password for your Colega account."
+    },
+    "resetPassword": {
+      "title": "Reset password — Colega",
+      "description": "Choose a new password for your Colega account."
+    },
+    "account": {
+      "title": "Account — Colega",
+      "description": "Manage your Colega account."
+    }
+  },
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "useCases": "Use cases",
+    "pricing": "Pricing",
+    "download": "Download",
+    "faq": "FAQ",
+    "login": "Log in",
+    "getStarted": "Get Started"
+  },
+  "accountMenu": {
+    "trigger": "Account",
+    "account": "Account",
+    "subscription": "Subscription",
+    "download": "Download Colega",
+    "logout": "Log out"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "tr": "Türkçe"
+  },
+  "hero": {
+    "badge": "Now in beta — Windows & Mac",
+    "headline": "Just work.\nColega keeps up.",
+    "subtext": "Share your screen when you want a second pair of eyes. Colega understands the context, remembers what matters, and steps in when something deserves your attention.",
+    "ctaPrimary": "Get Started",
+    "ctaWindows": "Download for Windows",
+    "ctaMac": "Or download for Mac",
+    "demo": {
+      "inputPlaceholder": "What are you working on?",
+      "shareScreen": "Share screen",
+      "screenShared": "Screen shared",
+      "stopSharing": "Stop sharing",
+      "notification": {
+        "title": "Small thing",
+        "body": "The headline looks slightly misaligned with the section below.",
+        "cta": "Take a look"
+      },
+      "memory": {
+        "line": "Remember this for later.",
+        "response": "Saved."
+      },
+      "reminder": {
+        "line": "Remind me about this tomorrow.",
+        "response": "Tomorrow, 10:00"
+      }
+    }
+  },
+  "trustedBy": {
+    "eyebrow": "Built for modern work"
+  },
+  "features": {
+    "eyebrow": "Why Colega",
+    "title": "Less like software. More like backup.",
+    "description": "Share your screen when you want it, and Colega follows the context — remembering details, catching what you'd miss, and staying quiet the rest of the time.",
+    "items": {
+      "sees": {
+        "title": "Sees the same screen you do",
+        "description": "When you share your screen, Colega follows along — no copy-pasting, no re-explaining what you're working on."
+      },
+      "nudge": {
+        "kicker": "A quiet nudge when something looks off",
+        "title": "Speaks up only when it's worth it",
+        "description": "Colega notices the small things — a misaligned headline, a mismatched number — and mentions them once, at the right moment.",
+        "demo": {
+          "before": "Design draft",
+          "issue": "Two prices shown on this page",
+          "notification": "You might want to check this"
+        }
+      },
+      "memory": {
+        "title": "Remembers what matters",
+        "description": "Tell it something once. Ask about it weeks later. It's still there.",
+        "demo": {
+          "line1": "We're launching on October 14.",
+          "reply1": "Got it.",
+          "line2": "When are we launching?",
+          "reply2": "October 14."
+        }
+      },
+      "tasks": {
+        "title": "Keeps your list honest",
+        "description": "To-dos, follow-ups, and reminders — organized without another app to check."
+      },
+      "teach": {
+        "title": "Your company's way of doing things",
+        "description": "Everyone shouldn't have to ask the same questions twice. Teach Colega your processes once, and it passes that knowledge on.",
+        "demo": {
+          "item1": "Brand guidelines",
+          "item2": "Refund procedure",
+          "item3": "Sales process",
+          "badge1": "Verified",
+          "badge2": "Company rule",
+          "badge3": "Verified"
+        }
+      },
+      "desktop": {
+        "title": "Feels like part of your desktop",
+        "description": "A fast, native app for Windows and Mac — not another browser tab."
+      },
+      "miniPanel": {
+        "title": "One shortcut away",
+        "description": "Summon a small panel instantly, get what you need, and get back to work."
+      },
+      "private": {
+        "title": "Your screen, your call",
+        "description": "Colega only sees what you choose to share. Nothing recorded without you knowing, nothing sold."
+      }
+    }
+  },
+  "showcase": {
+    "eyebrow": "Inside Colega",
+    "title": "See how it fits into your day",
+    "description": "One panel for conversation, tasks, notes, and reminders — always following along with what you share.",
+    "workspaceLabel": "Colega · Workspace",
+    "syncedLabel": "Synced just now",
+    "blocks": {
+      "chat": {
+        "title": "Context-aware chat",
+        "body": "“You're editing the pricing page — want me to check the copy against the plans in your sheet?”"
+      },
+      "tasks": {
+        "title": "Tasks, auto-organized",
+        "body": "3 tasks due today, 1 overdue follow-up with the design team."
+      },
+      "notes": {
+        "title": "Notes it remembers",
+        "body": "“Remember: client prefers async updates, no calls before 11am.”"
+      },
+      "reminders": {
+        "title": "Reminders that land on time",
+        "body": "Standup in 15 min · Invoice due Friday · Renew domain in 6 days"
+      }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "title": "Up and running in minutes",
+    "description": "No complex setup. Install it, share your screen when it helps, and Colega takes it from there.",
+    "steps": {
+      "install": {
+        "title": "Install Colega",
+        "description": "Download the desktop app for Windows or Mac and sign in in seconds."
+      },
+      "share": {
+        "title": "Share when it helps",
+        "description": "Turn on screen sharing anytime you want a second pair of eyes — turn it off just as easily."
+      },
+      "keepUp": {
+        "title": "Colega keeps up",
+        "description": "Notes, nudges, and reminders show up right when they're useful. Quiet the rest of the time."
+      }
+    }
+  },
+  "useCases": {
+    "eyebrow": "Who it's for",
+    "title": "Built for how you actually work",
+    "description": "Whether you're solo or part of a team, Colega adapts to your role.",
+    "items": {
+      "founders": {
+        "title": "Founders",
+        "description": "Stay on top of everything without hiring an assistant just yet."
+      },
+      "designers": {
+        "title": "Designers",
+        "description": "Keep feedback, versions, and inspiration organized in one place."
+      },
+      "developers": {
+        "title": "Developers",
+        "description": "Context-aware help while you code, debug, and ship."
+      },
+      "marketing": {
+        "title": "Marketing teams",
+        "description": "Track campaigns, deadlines, and briefs without losing momentum."
+      },
+      "operations": {
+        "title": "Operations",
+        "description": "Standardize processes and let Colega carry them forward automatically."
+      },
+      "teams": {
+        "title": "Small teams & companies",
+        "description": "Shared knowledge and workspace so everyone works from the same playbook."
+      }
+    }
+  },
+  "globalPresence": {
+    "eyebrow": "Global",
+    "title": "Built to work across borders.",
+    "description": "From Istanbul to Singapore, teams run Colega across time zones, languages, and ways of working — without missing a step.",
+    "countries": {
+      "tr": "Türkiye",
+      "us": "United States",
+      "ca": "Canada",
+      "gb": "United Kingdom",
+      "de": "Germany",
+      "fr": "France",
+      "nl": "Netherlands",
+      "ae": "United Arab Emirates",
+      "in": "India",
+      "sg": "Singapore",
+      "jp": "Japan",
+      "au": "Australia",
+      "br": "Brazil",
+      "za": "South Africa"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Loved by teams",
+    "title": "What people say after switching",
+    "description": "Real feedback from early users and teams running Colega day to day.",
+    "items": [
+      {
+        "quote": "Feels like having a second pair of eyes without constantly switching between apps.",
+        "name": "Elena Marsh",
+        "role": "Product Designer",
+        "company": "Northwind"
+      },
+      {
+        "quote": "I like that it stays quiet until there's actually something worth saying.",
+        "name": "Marcus Ade",
+        "role": "Founder",
+        "company": "Fieldnote"
+      },
+      {
+        "quote": "We started using it across the whole team and it just became part of how we work.",
+        "name": "Priya Nair",
+        "role": "Operations Lead",
+        "company": "Lumen"
+      },
+      {
+        "quote": "It caught a pricing mismatch on a client call before I even noticed it myself.",
+        "name": "Tomasz Krol",
+        "role": "Account Manager",
+        "company": "Vertex Labs"
+      },
+      {
+        "quote": "Small team, big workload — this quietly picks up the things we'd otherwise forget.",
+        "name": "Sofia Rinaldi",
+        "role": "Co-founder",
+        "company": "Orbit"
+      },
+      {
+        "quote": "It remembers details from weeks ago so I don't have to repeat myself in every meeting.",
+        "name": "Daniel Osei",
+        "role": "Engineering Manager",
+        "company": "Nimbus"
+      },
+      {
+        "quote": "Screen sharing used to mean re-explaining everything. Now it just follows along.",
+        "name": "Hannah Whitfield",
+        "role": "Consultant",
+        "company": "Northwind"
+      },
+      {
+        "quote": "The repetitive parts of my day got noticeably shorter without me changing how I work.",
+        "name": "Jonas Weber",
+        "role": "Freelance Developer",
+        "company": "Vertex Labs"
+      }
+    ]
+  },
+  "downloadTeaser": {
+    "eyebrow": "Download",
+    "title": "Get Colega on your desktop",
+    "description": "Available for Windows and Mac. Free to start, no credit card required.",
+    "betaBadge": "Beta access",
+    "windows": {
+      "title": "Windows",
+      "requirement": "Windows 10 & 11 (64-bit)",
+      "cta": "Download for Windows"
+    },
+    "mac": {
+      "title": "Mac",
+      "requirement": "macOS 13 Ventura or later",
+      "cta": "Download for Mac"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Simple pricing that scales with you",
+    "description": "Start free. Upgrade whenever you and your team are ready for more.",
+    "heroTitle": "Pricing that grows with you",
+    "heroDescription": "Start free as an individual. Upgrade to Pro for advanced memory and proactive help, or bring your whole team on board.",
+    "heroCta": "Get Started",
+    "billing": {
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "save": "Save 20%",
+      "billedAnnually": "Billed annually"
+    },
+    "priceCustom": "Custom",
+    "team": {
+      "seatsLabel": "Seats",
+      "seatsIncluded": "Includes 3 seats",
+      "extraSeatNote": "+$5/month for every additional seat",
+      "needMoreSeats": "Need more than 30 seats?",
+      "talkToSales": "Talk to Sales"
+    },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "tagline": "For individuals getting started",
+        "cta": "Get Started",
+        "features": [
+          "Basic memory",
+          "Tasks & reminders",
+          "Desktop access (Windows & Mac)",
+          "1 workspace",
+          "Community support"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "For power users who want more",
+        "cta": "Start free trial",
+        "features": [
+          "Advanced, long-term memory",
+          "Proactive nudges",
+          "Full workflow tools",
+          "Fast mini panel",
+          "Priority access to new features",
+          "Priority support"
+        ]
+      },
+      "team": {
+        "name": "Team",
+        "tagline": "For teams & companies",
+        "cta": "Get Started",
+        "features": [
+          "Everything in Pro",
+          "Colega learns how your company works",
+          "Shared team knowledge base",
+          "Team workspace",
+          "Admin controls & permissions",
+          "Dedicated onboarding"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "tagline": "For large-scale, company-wide deployments",
+        "cta": "Talk to Sales",
+        "features": [
+          "Large-scale team access",
+          "Advanced admin controls",
+          "Dedicated onboarding",
+          "Priority support",
+          "Custom workflows",
+          "SSO & advanced access controls — available for enterprise deployments",
+          "Custom billing & invoicing — contact us for availability"
+        ]
+      }
+    },
+    "mostPopular": "Most Popular",
+    "comparison": {
+      "eyebrow": "Compare plans",
+      "title": "Every feature, side by side",
+      "description": "See exactly what's included in each plan before you choose.",
+      "columns": {
+        "feature": "Feature",
+        "starter": "Starter",
+        "pro": "Pro",
+        "team": "Team"
+      },
+      "rows": {
+        "desktop": "Desktop app (Windows & Mac)",
+        "basicMemory": "Basic memory",
+        "advancedMemory": "Advanced long-term memory",
+        "proactive": "Proactive nudges",
+        "tasks": "Tasks & reminders",
+        "miniPanel": "Fast mini panel",
+        "teach": "Teach Colega your company knowledge",
+        "sharedWorkspace": "Shared team workspace",
+        "admin": "Admin controls",
+        "support": "Priority support",
+        "workspaces": "Workspaces"
+      },
+      "values": {
+        "workspacesStarter": "1",
+        "workspacesPro": "3",
+        "workspacesTeam": "Unlimited"
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "description": "Everything you need to know about Colega.",
+    "items": [
+      {
+        "question": "What is Colega?",
+        "answer": "Colega is a desktop companion that sits alongside your work. When you share your screen, it understands the context, remembers what matters, and steps in when something's worth your attention — quiet the rest of the time."
+      },
+      {
+        "question": "Does it work on Windows and Mac?",
+        "answer": "Yes. Colega is a native desktop app available for both Windows and Mac, designed to feel fast and integrated with your OS."
+      },
+      {
+        "question": "Can teams use Colega?",
+        "answer": "Yes. With the Team plan, everyone stops asking the same questions twice — teach Colega your processes and knowledge once, share a team workspace, and manage access with admin controls."
+      },
+      {
+        "question": "Is my data secure?",
+        "answer": "Yes. You control what Colega can see and remember — sharing your screen is always your choice. Everything is encrypted in transit and at rest, and your data is never sold."
+      },
+      {
+        "question": "Is there a free plan?",
+        "answer": "Yes, the Starter plan is free forever and includes basic memory, tasks, and desktop access. You can upgrade to Pro or Team any time."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Less switching. Less remembering.\nMore getting things done.",
+    "description": "Join the beta and let Colega catch what matters while you focus on the work in front of you.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "Download Now"
+  },
+  "footer": {
+    "tagline": "There when you need it. Quiet when you don't.",
+    "groups": {
+      "product": "Product",
+      "pricing": "Pricing",
+      "download": "Download",
+      "company": "Company"
+    },
+    "links": {
+      "features": "Features",
+      "howItWorks": "How it works",
+      "useCases": "Use cases",
+      "plans": "Plans",
+      "comparePlans": "Compare plans",
+      "faq": "FAQ",
+      "downloadWindows": "Download for Windows",
+      "downloadMac": "Download for Mac",
+      "releaseNotes": "Release notes",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "contact": "Contact"
+    },
+    "rights": "All rights reserved.",
+    "madeFor": "Made for modern work."
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Log in to pick up right where Colega left off.",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "forgotPassword": "Forgot password?",
+      "submit": "Log in",
+      "submitLoading": "Logging in…",
+      "footerText": "Don't have an account?",
+      "footerLink": "Sign up",
+      "or": "or",
+      "google": "Continue with Google",
+      "confirmedBanner": "Email confirmed — you're signed in."
+    },
+    "signup": {
+      "title": "Create your account",
+      "subtitle": "Get started with Colega in less than a minute.",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "confirmPasswordLabel": "Confirm password",
+      "submit": "Create account",
+      "submitLoading": "Creating account…",
+      "agreement": "By signing up, you agree to our <terms>Terms</terms> and <privacy>Privacy Policy</privacy>.",
+      "footerText": "Already have an account?",
+      "footerLink": "Log in",
+      "or": "or",
+      "google": "Continue with Google",
+      "checkEmailTitle": "Check your email",
+      "checkEmailBody": "Check your email to finish creating your account."
+    },
+    "forgotPassword": {
+      "title": "Reset your password",
+      "subtitle": "Enter the email on your account and we'll send you a reset link.",
+      "emailLabel": "Email",
+      "submit": "Send reset link",
+      "submitLoading": "Sending…",
+      "successTitle": "Check your email",
+      "successBody": "If an account exists for that email, a password reset link is on its way.",
+      "backToLogin": "Back to log in"
+    },
+    "resetPassword": {
+      "title": "Choose a new password",
+      "subtitle": "Enter a new password for your Colega account.",
+      "passwordLabel": "New password",
+      "confirmPasswordLabel": "Confirm new password",
+      "submit": "Update password",
+      "submitLoading": "Updating…",
+      "success": "Password updated",
+      "successBody": "Your password has been updated. Redirecting…",
+      "invalidLink": "This reset link is invalid or has expired",
+      "invalidLinkBody": "Request a new password reset link and try again.",
+      "requestNewLink": "Request a new link",
+      "backToLogin": "Back to log in"
+    },
+    "googleUnavailable": "Google sign-in isn't set up yet.",
+    "errors": {
+      "invalid_credentials": "Email or password is incorrect.",
+      "email_not_confirmed": "Please confirm your email before signing in — check your inbox.",
+      "user_already_registered": "An account with this email already exists — try signing in instead.",
+      "weak_password": "Password is too short — use at least 6 characters.",
+      "rate_limited": "Too many attempts — please wait a moment and try again.",
+      "network_error": "Could not reach Colega's servers — check your connection and try again.",
+      "same_password": "Please choose a password different from your current one.",
+      "missing_fields": "Please fill in all fields.",
+      "password_mismatch": "Passwords don't match.",
+      "not_configured": "Sign-in isn't available right now — please try again later.",
+      "unknown": "Something went wrong. Please try again."
+    }
+  },
+  "account": {
+    "title": "Account",
+    "subtitle": "Manage your Colega account.",
+    "loading": "Loading your account…",
+    "sections": {
+      "account": "Account",
+      "plan": "Plan",
+      "download": "Download",
+      "organizations": "Organizations"
+    },
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "currentPlan": "Current plan",
+    "plans": {
+      "free": "Free",
+      "pro": "Pro",
+      "teams": "Teams"
+    },
+    "downloadWindows": "Download for Windows",
+    "downloadMac": "Download for Mac",
+    "organizationsEmpty": "You're not part of any organization yet.",
+    "roles": {
+      "owner": "Owner",
+      "admin": "Admin",
+      "member": "Member"
+    },
+    "logout": "Log out"
+  },
+  "download": {
+    "badge": "Beta access",
+    "title": "Download Colega",
+    "description": "Available for Windows and Mac. Free during beta — no credit card required.",
+    "freeNote": "Free during beta · No credit card required",
+    "version": "Version",
+    "windows": {
+      "title": "Windows",
+      "requirement": "Windows 10 & 11 (64-bit)"
+    },
+    "mac": {
+      "title": "Mac",
+      "requirement": "macOS 13 Ventura or later"
+    },
+    "downloadFor": "Download for {platform}",
+    "requirements": {
+      "eyebrow": "System requirements",
+      "title": "Make sure your machine is ready",
+      "cpu": {
+        "title": "Processor",
+        "description": "Apple Silicon or Intel (Mac) · 64-bit x86 (Windows)"
+      },
+      "storage": {
+        "title": "Storage",
+        "description": "At least 400 MB of free disk space"
+      },
+      "connection": {
+        "title": "Connection",
+        "description": "Internet connection required for sync & screen sharing"
+      }
+    },
+    "releaseNotes": {
+      "eyebrow": "Release notes",
+      "title": "What's new in Colega",
+      "entries": [
+        {
+          "version": "0.9.2 (Beta)",
+          "date": "September 2026",
+          "notes": [
+            "Improved screen-share context accuracy",
+            "Faster mini panel launch time",
+            "Fixed memory sync issue on wake from sleep"
+          ]
+        },
+        {
+          "version": "0.9.0 (Beta)",
+          "date": "August 2026",
+          "notes": [
+            "Introduced Teach Colega for company knowledge",
+            "New tasks & reminders panel",
+            "Initial public beta release"
+          ]
+        }
+      ]
+    }
+  },
+  "legal": {
+    "privacy": {
+      "eyebrow": "Legal",
+      "title": "Privacy Policy",
+      "paragraphs": [
+        "This is placeholder legal content for the Colega privacy policy. In a production build, this page would describe in detail what data Colega collects, how it is stored, and how you can control it.",
+        "Colega only sees what you explicitly share with it — like your screen, when you turn that on — and you can revoke access or delete your data at any time from your account settings."
+      ]
+    },
+    "terms": {
+      "eyebrow": "Legal",
+      "title": "Terms of Service",
+      "paragraphs": [
+        "This is placeholder legal content for the Colega terms of service. In a production build, this page would describe the rules and responsibilities that apply when using Colega on your desktop.",
+        "By using Colega, you agree to use the product responsibly and in accordance with applicable laws and these terms."
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Get in touch",
+      "paragraph": "Have a question about Colega, need help with your account, or want to talk about bringing Colega to your team? We'd love to hear from you.",
+      "email": "hello@colega.ai"
+    }
+  }
+}

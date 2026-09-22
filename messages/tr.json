@@ -1,0 +1,669 @@
+{
+  "meta": {
+    "home": {
+      "title": "Colega — Sen işine bak. Colega yetişir.",
+      "description": "Colega, ekranını paylaştığında bağlamı anlayan, önemli olanları hatırlayan ve dikkat etmen gereken bir şey olduğunda yanında beliren bir masaüstü arkadaşı."
+    },
+    "login": {
+      "title": "Giriş yap — Colega",
+      "description": "Colega hesabına giriş yap."
+    },
+    "signup": {
+      "title": "Kayıt ol — Colega",
+      "description": "Colega hesabını oluştur, bir dakikadan kısa sürede hazır ol."
+    },
+    "pricing": {
+      "title": "Fiyatlandırma — Colega",
+      "description": "Bireyler ve ekipler için basit, şeffaf Colega fiyatlandırması."
+    },
+    "download": {
+      "title": "İndir — Colega",
+      "description": "Colega'yı Windows veya Mac için indir."
+    },
+    "privacy": {
+      "title": "Gizlilik Politikası — Colega",
+      "description": "Colega verilerini nasıl topluyor, kullanıyor ve koruyor."
+    },
+    "terms": {
+      "title": "Kullanım Koşulları — Colega",
+      "description": "Colega'yı kullanırken geçerli olan koşullar."
+    },
+    "contact": {
+      "title": "İletişim — Colega",
+      "description": "Colega ekibiyle iletişime geç."
+    },
+    "forgotPassword": {
+      "title": "Şifremi unuttum — Colega",
+      "description": "Colega hesabının şifresini sıfırla."
+    },
+    "resetPassword": {
+      "title": "Şifreyi sıfırla — Colega",
+      "description": "Colega hesabın için yeni bir şifre belirle."
+    },
+    "account": {
+      "title": "Hesap — Colega",
+      "description": "Colega hesabını yönet."
+    }
+  },
+  "nav": {
+    "features": "Özellikler",
+    "howItWorks": "Nasıl çalışır",
+    "useCases": "Kimler için",
+    "pricing": "Fiyatlandırma",
+    "download": "İndir",
+    "faq": "SSS",
+    "login": "Giriş yap",
+    "getStarted": "Hemen Başla"
+  },
+  "accountMenu": {
+    "trigger": "Hesap",
+    "account": "Hesap",
+    "subscription": "Abonelik",
+    "download": "Colega'yı İndir",
+    "logout": "Çıkış yap"
+  },
+  "languageSwitcher": {
+    "label": "Dil",
+    "en": "English",
+    "tr": "Türkçe"
+  },
+  "hero": {
+    "badge": "Şu an beta'da — Windows ve Mac",
+    "headline": "Sen işine bak.\nColega yetişir.",
+    "subtext": "İhtiyacın olduğunda ekranını paylaş. Colega bağlamı anlar, önemli olanları hatırlar ve dikkat etmen gereken bir şey olduğunda yanında belirir.",
+    "ctaPrimary": "Hemen Başla",
+    "ctaWindows": "Windows için indir",
+    "ctaMac": "Ya da Mac için indir",
+    "demo": {
+      "inputPlaceholder": "Şu an ne üzerinde çalışıyorsun?",
+      "shareScreen": "Ekranı paylaş",
+      "screenShared": "Ekran paylaşıldı",
+      "stopSharing": "Paylaşımı durdur",
+      "notification": {
+        "title": "Küçük bir detay",
+        "body": "Başlık, alttaki bölümle biraz hizasız duruyor.",
+        "cta": "Bir bak"
+      },
+      "memory": {
+        "line": "Bunu sonra için hatırla.",
+        "response": "Kaydedildi."
+      },
+      "reminder": {
+        "line": "Bunu bana yarın hatırlat.",
+        "response": "Yarın, 10:00"
+      }
+    }
+  },
+  "trustedBy": {
+    "eyebrow": "Modern iş için tasarlandı"
+  },
+  "features": {
+    "eyebrow": "Neden Colega",
+    "title": "Bir yazılımdan çok, bir yedeğe benziyor.",
+    "description": "İstediğinde ekranını paylaş, Colega bağlamı yakalar — detayları hatırlar, gözden kaçırabileceğin şeyleri fark eder ve geri kalan zaman sessiz kalır.",
+    "items": {
+      "sees": {
+        "title": "Aynı ekranı senle birlikte görür",
+        "description": "Ekranını paylaştığında Colega da seninle birlikte takip eder — kopyala-yapıştır yok, tekrar anlatmak yok."
+      },
+      "nudge": {
+        "kicker": "Bir şey ters göründüğünde sessiz bir dürtme",
+        "title": "Sadece değdiğinde konuşur",
+        "description": "Colega küçük şeyleri fark eder — hizasız bir başlık, tutarsız bir rakam — ve bunu tam doğru anda, bir kez söyler.",
+        "demo": {
+          "before": "Tasarım taslağı",
+          "issue": "Bu sayfada iki farklı fiyat görünüyor",
+          "notification": "Buna bir göz atmak isteyebilirsin"
+        }
+      },
+      "memory": {
+        "title": "Önemli olanı hatırlar",
+        "description": "Bir kere söyle, yeter. Haftalar sonra sorduğunda hâlâ orada.",
+        "demo": {
+          "line1": "14 Ekim'de yayına alıyoruz.",
+          "reply1": "Not aldım.",
+          "line2": "Ne zaman yayına alıyorduk?",
+          "reply2": "14 Ekim."
+        }
+      },
+      "tasks": {
+        "title": "Listeni dürüst tutar",
+        "description": "Yapılacaklar, takip edilecekler ve hatırlatmalar — başka bir uygulamaya bakmana gerek kalmadan düzenli."
+      },
+      "teach": {
+        "title": "Şirketinin kendi işleyiş biçimi",
+        "description": "Herkesin aynı soruyu iki kere sormasına gerek yok. Süreçlerini Colega'ya bir kere öğret, o bilgiyi doğru yerde paylaşsın.",
+        "demo": {
+          "item1": "Marka rehberi",
+          "item2": "İade prosedürü",
+          "item3": "Satış süreci",
+          "badge1": "Doğrulandı",
+          "badge2": "Şirket kuralı",
+          "badge3": "Doğrulandı"
+        }
+      },
+      "desktop": {
+        "title": "Masaüstünün bir parçası gibi",
+        "description": "Windows ve Mac için hızlı, native bir uygulama — bir tarayıcı sekmesi değil."
+      },
+      "miniPanel": {
+        "title": "Bir kısayol uzağında",
+        "description": "Küçük bir paneli anında çağır, ihtiyacını al, işine geri dön."
+      },
+      "private": {
+        "title": "Ekranın, senin kararın",
+        "description": "Colega sadece paylaşmayı seçtiğin şeyi görür. Sen bilmeden hiçbir şey kaydedilmez, hiçbir şey satılmaz."
+      }
+    }
+  },
+  "showcase": {
+    "eyebrow": "Colega'nın içinde",
+    "title": "Gününe nasıl uyduğunu gör",
+    "description": "Sohbet, görevler, notlar ve hatırlatmalar için tek bir panel — paylaştığın her şeyi takip ederek.",
+    "workspaceLabel": "Colega · Çalışma alanı",
+    "syncedLabel": "Az önce eşitlendi",
+    "blocks": {
+      "chat": {
+        "title": "Bağlamı bilen sohbet",
+        "body": "“Fiyatlandırma sayfasını düzenliyorsun — metni tablodaki planlarla karşılaştırayım mı?”"
+      },
+      "tasks": {
+        "title": "Kendiliğinden düzenlenen görevler",
+        "body": "Bugün 3 görev, tasarım ekibiyle 1 gecikmiş takip var."
+      },
+      "notes": {
+        "title": "Hatırladığı notlar",
+        "body": "“Unutma: müşteri asenkron güncellemeleri tercih ediyor, 11'den önce arama yok.”"
+      },
+      "reminders": {
+        "title": "Tam zamanında gelen hatırlatmalar",
+        "body": "15 dakikaya standup · Cuma'ya fatura son günü · 6 gün sonra alan adı yenileme"
+      }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "Nasıl çalışır",
+    "title": "Dakikalar içinde hazır",
+    "description": "Karmaşık bir kurulum yok. Kur, işine yarayacağı an ekranını paylaş, gerisini Colega halletsin.",
+    "steps": {
+      "install": {
+        "title": "Colega'yı kur",
+        "description": "Windows veya Mac için masaüstü uygulamasını indir, saniyeler içinde giriş yap."
+      },
+      "share": {
+        "title": "İşine yarayacağı an paylaş",
+        "description": "İkinci bir göz istediğinde ekran paylaşımını aç — istediğinde de aynı kolaylıkla kapat."
+      },
+      "keepUp": {
+        "title": "Colega yetişir",
+        "description": "Notlar, hatırlatmalar ve dürtmeler tam işine yarayacağı an belirir. Geri kalan zaman sessiz."
+      }
+    }
+  },
+  "useCases": {
+    "eyebrow": "Kimler için",
+    "title": "Gerçekten çalıştığın şekle göre kuruldu",
+    "description": "İster tek başına çalış, ister bir ekibin parçası ol — Colega rolüne göre şekillenir.",
+    "items": {
+      "founders": {
+        "title": "Kurucular",
+        "description": "Henüz bir asistan tutmadan her şeyin üstünde kal."
+      },
+      "designers": {
+        "title": "Tasarımcılar",
+        "description": "Geri bildirimleri, versiyonları ve ilhamı tek bir yerde düzenli tut."
+      },
+      "developers": {
+        "title": "Geliştiriciler",
+        "description": "Kod yazarken, hata ayıklarken ve yayına alırken bağlamı bilen yardım."
+      },
+      "marketing": {
+        "title": "Pazarlama ekipleri",
+        "description": "Kampanyaları, teslim tarihlerini ve brief'leri momentum kaybetmeden takip et."
+      },
+      "operations": {
+        "title": "Operasyon",
+        "description": "Süreçleri standartlaştır, Colega bunları otomatik olarak taşısın."
+      },
+      "teams": {
+        "title": "Küçük ekipler ve şirketler",
+        "description": "Ortak bilgi ve çalışma alanı sayesinde herkes aynı el kitabından ilerler."
+      }
+    }
+  },
+  "globalPresence": {
+    "eyebrow": "Global",
+    "title": "Sınırların ötesinde çalışmak için tasarlandı.",
+    "description": "İstanbul'dan Singapur'a, ekipler farklı saat dilimlerinde ve çalışma şekillerinde Colega kullanıyor — hiçbir adımı kaçırmadan.",
+    "countries": {
+      "tr": "Türkiye",
+      "us": "Amerika Birleşik Devletleri",
+      "ca": "Kanada",
+      "gb": "Birleşik Krallık",
+      "de": "Almanya",
+      "fr": "Fransa",
+      "nl": "Hollanda",
+      "ae": "Birleşik Arap Emirlikleri",
+      "in": "Hindistan",
+      "sg": "Singapur",
+      "jp": "Japonya",
+      "au": "Avustralya",
+      "br": "Brezilya",
+      "za": "Güney Afrika"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Ekiplerin tercihi",
+    "title": "Kullananlar ne diyor",
+    "description": "Colega'yı her gün kullanan erken kullanıcılardan ve ekiplerden gerçek geri bildirimler.",
+    "items": [
+      {
+        "quote": "Sürekli uygulama değiştirmeden ikinci bir göz gibi çalışıyor.",
+        "name": "Elena Marsh",
+        "role": "Ürün Tasarımcısı",
+        "company": "Northwind"
+      },
+      {
+        "quote": "Söyleyecek gerçekten bir şey olana kadar sessiz kalması hoşuma gidiyor.",
+        "name": "Marcus Ade",
+        "role": "Kurucu",
+        "company": "Fieldnote"
+      },
+      {
+        "quote": "Tüm ekipte kullanmaya başladık ve kısa sürede iş akışımızın bir parçası oldu.",
+        "name": "Priya Nair",
+        "role": "Operasyon Lideri",
+        "company": "Lumen"
+      },
+      {
+        "quote": "Ben fark etmeden önce müşteri görüşmesindeki fiyat uyuşmazlığını yakaladı.",
+        "name": "Tomasz Krol",
+        "role": "Müşteri Yöneticisi",
+        "company": "Vertex Labs"
+      },
+      {
+        "quote": "Küçük bir ekibiz ama iş yükümüz büyük — gözden kaçırdığımız şeyleri sessizce takip ediyor.",
+        "name": "Sofia Rinaldi",
+        "role": "Kurucu Ortak",
+        "company": "Orbit"
+      },
+      {
+        "quote": "Haftalar önce konuştuğum detayları hatırlıyor, her toplantıda tekrar anlatmama gerek kalmıyor.",
+        "name": "Daniel Osei",
+        "role": "Mühendislik Yöneticisi",
+        "company": "Nimbus"
+      },
+      {
+        "quote": "Ekran paylaşımı eskiden her şeyi yeniden anlatmak demekti. Artık akışı kendisi takip ediyor.",
+        "name": "Hannah Whitfield",
+        "role": "Danışman",
+        "company": "Northwind"
+      },
+      {
+        "quote": "Çalışma şeklimi değiştirmeden günlük tekrarlayan işler fark edilir şekilde azaldı.",
+        "name": "Jonas Weber",
+        "role": "Serbest Yazılım Geliştirici",
+        "company": "Vertex Labs"
+      }
+    ]
+  },
+  "downloadTeaser": {
+    "eyebrow": "İndir",
+    "title": "Colega'yı masaüstüne al",
+    "description": "Windows ve Mac için hazır. Başlamak ücretsiz, kredi kartı gerekmez.",
+    "betaBadge": "Beta erişimi",
+    "windows": {
+      "title": "Windows",
+      "requirement": "Windows 10 ve 11 (64-bit)",
+      "cta": "Windows için indir"
+    },
+    "mac": {
+      "title": "Mac",
+      "requirement": "macOS 13 Ventura veya üzeri",
+      "cta": "Mac için indir"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Fiyatlandırma",
+    "title": "Seninle birlikte büyüyen basit fiyatlandırma",
+    "description": "Ücretsiz başla. Sen ve ekibin hazır olduğunuzda yükseltin.",
+    "heroTitle": "Seninle birlikte büyüyen fiyatlandırma",
+    "heroDescription": "Birey olarak ücretsiz başla. Gelişmiş hafıza ve proaktif yardım için Pro'ya geç, ya da tüm ekibini dahil et.",
+    "heroCta": "Hemen Başla",
+    "billing": {
+      "monthly": "Aylık",
+      "annual": "Yıllık",
+      "save": "%20 tasarruf",
+      "billedAnnually": "Yıllık faturalandırılır"
+    },
+    "priceCustom": "Özel",
+    "team": {
+      "seatsLabel": "Kişi sayısı",
+      "seatsIncluded": "3 kişi dahildir",
+      "extraSeatNote": "Her ek kişi için +$5/ay",
+      "needMoreSeats": "30'dan fazla kişiye mi ihtiyacın var?",
+      "talkToSales": "Satış Ekibiyle Görüş"
+    },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "tagline": "Yeni başlayan bireyler için",
+        "cta": "Hemen Başla",
+        "features": [
+          "Temel hafıza",
+          "Görevler ve hatırlatmalar",
+          "Masaüstü erişimi (Windows ve Mac)",
+          "1 çalışma alanı",
+          "Topluluk desteği"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "Daha fazlasını isteyen ileri düzey kullanıcılar için",
+        "cta": "Ücretsiz denemeyi başlat",
+        "features": [
+          "Gelişmiş, uzun süreli hafıza",
+          "Proaktif dürtmeler",
+          "Tüm iş akışı araçları",
+          "Hızlı mini panel",
+          "Yeni özelliklere öncelikli erişim",
+          "Öncelikli destek"
+        ]
+      },
+      "team": {
+        "name": "Team",
+        "tagline": "Ekipler ve şirketler için",
+        "cta": "Hemen Başla",
+        "features": [
+          "Pro'daki her şey",
+          "Colega şirketinin işleyişini öğrenir",
+          "Paylaşımlı ekip bilgi tabanı",
+          "Ekip çalışma alanı",
+          "Yönetici kontrolleri ve izinler",
+          "Özel katılım desteği"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "tagline": "Büyük ölçekli, şirket geneli kullanım için",
+        "cta": "Satış Ekibiyle Görüş",
+        "features": [
+          "Büyük ölçekli ekip erişimi",
+          "Gelişmiş yönetici kontrolleri",
+          "Özel katılım desteği",
+          "Öncelikli destek",
+          "Özel iş akışları",
+          "SSO ve gelişmiş erişim kontrolleri — kurumsal kullanımlarda sunulur",
+          "Özel faturalandırma — uygunluk için bize ulaşın"
+        ]
+      }
+    },
+    "mostPopular": "En Popüler",
+    "comparison": {
+      "eyebrow": "Planları karşılaştır",
+      "title": "Tüm özellikler yan yana",
+      "description": "Seçim yapmadan önce her planda tam olarak neyin dahil olduğunu gör.",
+      "columns": {
+        "feature": "Özellik",
+        "starter": "Starter",
+        "pro": "Pro",
+        "team": "Team"
+      },
+      "rows": {
+        "desktop": "Masaüstü uygulaması (Windows ve Mac)",
+        "basicMemory": "Temel hafıza",
+        "advancedMemory": "Gelişmiş, uzun süreli hafıza",
+        "proactive": "Proaktif dürtmeler",
+        "tasks": "Görevler ve hatırlatmalar",
+        "miniPanel": "Hızlı mini panel",
+        "teach": "Şirket bilgisini Colega'ya öğret",
+        "sharedWorkspace": "Paylaşımlı ekip çalışma alanı",
+        "admin": "Yönetici kontrolleri",
+        "support": "Öncelikli destek",
+        "workspaces": "Çalışma alanları"
+      },
+      "values": {
+        "workspacesStarter": "1",
+        "workspacesPro": "3",
+        "workspacesTeam": "Sınırsız"
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "SSS",
+    "title": "Sıkça sorulan sorular",
+    "description": "Colega hakkında bilmen gereken her şey.",
+    "items": [
+      {
+        "question": "Colega nedir?",
+        "answer": "Colega, işinin yanında duran bir masaüstü arkadaşı. Ekranını paylaştığında bağlamı anlar, önemli olanları hatırlar ve değdiğinde yanında belirir — geri kalan zaman sessiz kalır."
+      },
+      {
+        "question": "Windows ve Mac'te çalışıyor mu?",
+        "answer": "Evet. Colega hem Windows hem de Mac için native bir masaüstü uygulaması — işletim sistemine hızlı ve entegre hissettirmek üzere tasarlandı."
+      },
+      {
+        "question": "Ekipler Colega'yı kullanabilir mi?",
+        "answer": "Evet. Team planıyla herkes aynı soruyu iki kere sormaktan kurtulur — süreçlerini ve bilgini Colega'ya bir kere öğret, ekip çalışma alanını paylaş, erişimi yönetici kontrolleriyle yönet."
+      },
+      {
+        "question": "Verilerim güvende mi?",
+        "answer": "Evet. Colega'nın ne görüp ne hatırlayacağını sen kontrol edersin — ekranını paylaşmak her zaman senin seçimindir. Her şey aktarımda ve depolamada şifrelenir, verilerin asla satılmaz."
+      },
+      {
+        "question": "Ücretsiz plan var mı?",
+        "answer": "Evet, Starter planı sonsuza dek ücretsiz ve temel hafıza, görevler ile masaüstü erişimini içerir. İstediğin zaman Pro veya Team'e geçebilirsin."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Daha az geçiş. Daha az hatırlama derdi.\nDaha çok iş çıkarma.",
+    "description": "Beta'ya katıl, önemli olanı Colega yakalasın — sen önündeki işe odaklan.",
+    "ctaPrimary": "Hemen Başla",
+    "ctaSecondary": "Şimdi İndir"
+  },
+  "footer": {
+    "tagline": "İhtiyacın olduğunda yanında. Olmadığında sessiz.",
+    "groups": {
+      "product": "Ürün",
+      "pricing": "Fiyatlandırma",
+      "download": "İndir",
+      "company": "Şirket"
+    },
+    "links": {
+      "features": "Özellikler",
+      "howItWorks": "Nasıl çalışır",
+      "useCases": "Kimler için",
+      "plans": "Planlar",
+      "comparePlans": "Planları karşılaştır",
+      "faq": "SSS",
+      "downloadWindows": "Windows için indir",
+      "downloadMac": "Mac için indir",
+      "releaseNotes": "Sürüm notları",
+      "privacy": "Gizlilik",
+      "terms": "Koşullar",
+      "contact": "İletişim"
+    },
+    "rights": "Tüm hakları saklıdır.",
+    "madeFor": "Modern iş için tasarlandı."
+  },
+  "auth": {
+    "login": {
+      "title": "Tekrar hoş geldin",
+      "subtitle": "Colega'nın bıraktığı yerden devam etmek için giriş yap.",
+      "emailLabel": "E-posta",
+      "passwordLabel": "Şifre",
+      "forgotPassword": "Şifreni mi unuttun?",
+      "submit": "Giriş yap",
+      "submitLoading": "Giriş yapılıyor…",
+      "footerText": "Hesabın yok mu?",
+      "footerLink": "Kayıt ol",
+      "or": "veya",
+      "google": "Google ile devam et",
+      "confirmedBanner": "E-posta onaylandı — giriş yapıldı."
+    },
+    "signup": {
+      "title": "Hesabını oluştur",
+      "subtitle": "Colega ile bir dakikadan kısa sürede başla.",
+      "nameLabel": "Ad Soyad",
+      "emailLabel": "E-posta",
+      "passwordLabel": "Şifre",
+      "confirmPasswordLabel": "Şifreyi onayla",
+      "submit": "Hesap oluştur",
+      "submitLoading": "Hesap oluşturuluyor…",
+      "agreement": "Kayıt olarak <terms>Kullanım Koşulları</terms>'nı ve <privacy>Gizlilik Politikası</privacy>'nı kabul etmiş olursun.",
+      "footerText": "Zaten bir hesabın var mı?",
+      "footerLink": "Giriş yap",
+      "or": "veya",
+      "google": "Google ile devam et",
+      "checkEmailTitle": "E-postanı kontrol et",
+      "checkEmailBody": "Hesabını tamamlamak için e-postanı kontrol et."
+    },
+    "forgotPassword": {
+      "title": "Şifreni sıfırla",
+      "subtitle": "Hesabındaki e-postayı gir, sana bir sıfırlama bağlantısı gönderelim.",
+      "emailLabel": "E-posta",
+      "submit": "Sıfırlama bağlantısı gönder",
+      "submitLoading": "Gönderiliyor…",
+      "successTitle": "E-postanı kontrol et",
+      "successBody": "Bu e-postaya kayıtlı bir hesap varsa, şifre sıfırlama bağlantısı yola çıktı.",
+      "backToLogin": "Girişe dön"
+    },
+    "resetPassword": {
+      "title": "Yeni bir şifre belirle",
+      "subtitle": "Colega hesabın için yeni bir şifre gir.",
+      "passwordLabel": "Yeni şifre",
+      "confirmPasswordLabel": "Yeni şifreyi onayla",
+      "submit": "Şifreyi güncelle",
+      "submitLoading": "Güncelleniyor…",
+      "success": "Şifre güncellendi",
+      "successBody": "Şifren güncellendi. Yönlendiriliyorsun…",
+      "invalidLink": "Bu sıfırlama bağlantısı geçersiz veya süresi dolmuş",
+      "invalidLinkBody": "Yeni bir şifre sıfırlama bağlantısı iste ve tekrar dene.",
+      "requestNewLink": "Yeni bağlantı iste",
+      "backToLogin": "Girişe dön"
+    },
+    "googleUnavailable": "Google ile giriş henüz kullanıma açık değil.",
+    "errors": {
+      "invalid_credentials": "E-posta veya şifre hatalı.",
+      "email_not_confirmed": "Giriş yapmadan önce lütfen e-postanı onayla — gelen kutunu kontrol et.",
+      "user_already_registered": "Bu e-postayla bir hesap zaten var — bunun yerine giriş yapmayı dene.",
+      "weak_password": "Şifre çok kısa — en az 6 karakter kullan.",
+      "rate_limited": "Çok fazla deneme yapıldı — lütfen biraz bekleyip tekrar dene.",
+      "network_error": "Colega sunucularına ulaşılamadı — bağlantını kontrol edip tekrar dene.",
+      "same_password": "Lütfen mevcut şifrenden farklı bir şifre seç.",
+      "missing_fields": "Lütfen tüm alanları doldur.",
+      "password_mismatch": "Şifreler eşleşmiyor.",
+      "not_configured": "Giriş şu anda kullanılamıyor — lütfen daha sonra tekrar dene.",
+      "unknown": "Bir şeyler ters gitti. Lütfen tekrar dene."
+    }
+  },
+  "account": {
+    "title": "Hesap",
+    "subtitle": "Colega hesabını yönet.",
+    "loading": "Hesabın yükleniyor…",
+    "sections": {
+      "account": "Hesap",
+      "plan": "Plan",
+      "download": "İndir",
+      "organizations": "Organizasyonlar"
+    },
+    "nameLabel": "Ad Soyad",
+    "emailLabel": "E-posta",
+    "currentPlan": "Mevcut plan",
+    "plans": {
+      "free": "Ücretsiz",
+      "pro": "Pro",
+      "teams": "Takımlar"
+    },
+    "downloadWindows": "Windows için indir",
+    "downloadMac": "Mac için indir",
+    "organizationsEmpty": "Henüz bir organizasyona üye değilsin.",
+    "roles": {
+      "owner": "Sahip",
+      "admin": "Yönetici",
+      "member": "Üye"
+    },
+    "logout": "Çıkış yap"
+  },
+  "download": {
+    "badge": "Beta erişimi",
+    "title": "Colega'yı indir",
+    "description": "Windows ve Mac için hazır. Beta süresince ücretsiz — kredi kartı gerekmez.",
+    "freeNote": "Beta süresince ücretsiz · Kredi kartı gerekmez",
+    "version": "Sürüm",
+    "windows": {
+      "title": "Windows",
+      "requirement": "Windows 10 ve 11 (64-bit)"
+    },
+    "mac": {
+      "title": "Mac",
+      "requirement": "macOS 13 Ventura veya üzeri"
+    },
+    "downloadFor": "{platform} için indir",
+    "requirements": {
+      "eyebrow": "Sistem gereksinimleri",
+      "title": "Cihazının hazır olduğundan emin ol",
+      "cpu": {
+        "title": "İşlemci",
+        "description": "Apple Silicon veya Intel (Mac) · 64-bit x86 (Windows)"
+      },
+      "storage": {
+        "title": "Depolama",
+        "description": "En az 400 MB boş disk alanı"
+      },
+      "connection": {
+        "title": "Bağlantı",
+        "description": "Eşitleme ve ekran paylaşımı için internet bağlantısı gerekir"
+      }
+    },
+    "releaseNotes": {
+      "eyebrow": "Sürüm notları",
+      "title": "Colega'da yenilikler",
+      "entries": [
+        {
+          "version": "0.9.2 (Beta)",
+          "date": "Eylül 2026",
+          "notes": [
+            "Ekran paylaşımı bağlam doğruluğu iyileştirildi",
+            "Mini panel açılış hızı arttırıldı",
+            "Uyandıktan sonra hafıza eşitleme sorunu giderildi"
+          ]
+        },
+        {
+          "version": "0.9.0 (Beta)",
+          "date": "Ağustos 2026",
+          "notes": [
+            "Şirket bilgisi için Teach Colega tanıtıldı",
+            "Yeni görevler ve hatırlatmalar paneli",
+            "İlk genel beta sürümü"
+          ]
+        }
+      ]
+    }
+  },
+  "legal": {
+    "privacy": {
+      "eyebrow": "Yasal",
+      "title": "Gizlilik Politikası",
+      "paragraphs": [
+        "Bu, Colega gizlilik politikası için yer tutucu bir içeriktir. Gerçek bir sürümde bu sayfa, Colega'nın hangi verileri topladığını, nasıl sakladığını ve bunları nasıl kontrol edebileceğini ayrıntılı olarak açıklar.",
+        "Colega yalnızca açıkça paylaştığın şeyi görür — örneğin ekranını, onu açtığında — ve erişimi istediğin an hesap ayarlarından iptal edebilir ya da verilerini silebilirsin."
+      ]
+    },
+    "terms": {
+      "eyebrow": "Yasal",
+      "title": "Kullanım Koşulları",
+      "paragraphs": [
+        "Bu, Colega kullanım koşulları için yer tutucu bir içeriktir. Gerçek bir sürümde bu sayfa, Colega'yı masaüstünde kullanırken geçerli olan kuralları ve sorumlulukları açıklar.",
+        "Colega'yı kullanarak ürünü sorumlu bir şekilde ve geçerli yasalarla bu koşullara uygun olarak kullanmayı kabul edersin."
+      ]
+    },
+    "contact": {
+      "eyebrow": "İletişim",
+      "title": "Bize ulaş",
+      "paragraph": "Colega hakkında bir sorun mu var, hesabınla ilgili yardıma mı ihtiyacın var, ya da Colega'yı ekibine getirmek mi istiyorsun? Senden haber almak isteriz.",
+      "email": "hello@colega.ai"
+    }
+  }
+}

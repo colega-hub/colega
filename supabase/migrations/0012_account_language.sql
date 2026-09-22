@@ -1,0 +1,14 @@
+-- Pre-Phase 5 — First-Run Language Selection + Full App Localization. Run this against the same
+-- Supabase project that already has 0001-0011 applied.
+--
+-- Language is a USER preference (spec §9/§25), account-scoped exactly like
+-- onboarding_version_seen/changelog_version_seen (0011_onboarding_state.sql) — same table, same
+-- reasoning: one column, owner-only UPDATE policy already exists on profiles, no new table
+-- warranted for a single field.
+--
+-- null = no account-scoped preference set yet (every pre-this-phase account). App-side fallback
+-- chain (src/core/language.ts's resolveInitialLanguage): keep the account preference if present,
+-- else the device's current app language, else a supported system-locale match, else English.
+-- That resolved value is written back here the first time it's determined, so it only ever needs
+-- resolving once per account.
+alter table public.profiles add column if not exists preferred_language text check (preferred_language in ('tr', 'en', 'de', 'es', 'fr'));
