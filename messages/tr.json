@@ -543,7 +543,7 @@
       "requestNewLink": "Yeni bağlantı iste",
       "backToLogin": "Girişe dön"
     },
-    "googleUnavailable": "Google ile giriş henüz kullanıma açık değil.",
+    "googleLoading": "Google'a yönlendiriliyor…",
     "errors": {
       "invalid_credentials": "E-posta veya şifre hatalı.",
       "email_not_confirmed": "Giriş yapmadan önce lütfen e-postanı onayla — gelen kutunu kontrol et.",
@@ -555,6 +555,7 @@
       "missing_fields": "Lütfen tüm alanları doldur.",
       "password_mismatch": "Şifreler eşleşmiyor.",
       "not_configured": "Giriş şu anda kullanılamıyor — lütfen daha sonra tekrar dene.",
+      "oauth_failed": "Google ile giriş tamamlanamadı. Lütfen tekrar dene.",
       "unknown": "Bir şeyler ters gitti. Lütfen tekrar dene."
     }
   },

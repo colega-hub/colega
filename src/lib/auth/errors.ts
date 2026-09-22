@@ -38,6 +38,7 @@ export type AuthErrorCode =
   | "rate_limited"
   | "network_error"
   | "same_password"
+  | "oauth_failed"
   | "unknown";
 
 // Supabase's stable error.code -> this app's AuthErrorCode. See the ErrorCode union in
@@ -54,6 +55,10 @@ const CODE_MAP: Partial<Record<string, AuthErrorCode>> = {
   over_sms_send_rate_limit: "rate_limited",
   same_password: "same_password",
   request_timeout: "network_error",
+  provider_disabled: "oauth_failed",
+  bad_oauth_state: "oauth_failed",
+  bad_oauth_callback: "oauth_failed",
+  oauth_provider_not_supported: "oauth_failed",
 };
 
 // Last-resort message matching — only reached when the error has neither a recognized .code

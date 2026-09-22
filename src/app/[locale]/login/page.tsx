@@ -17,10 +17,10 @@ export default async function LoginPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ confirmed?: string }>;
+  searchParams: Promise<{ confirmed?: string; oauth_error?: string }>;
 }) {
   const { locale } = await params;
-  const { confirmed } = await searchParams;
+  const { confirmed, oauth_error: oauthError } = await searchParams;
   const t = await getTranslations({ locale, namespace: "auth.login" });
 
   return (
@@ -31,7 +31,7 @@ export default async function LoginPage({
       footerLinkLabel={t("footerLink")}
       footerLinkHref="/signup"
     >
-      <LoginForm showConfirmedBanner={confirmed === "1"} />
+      <LoginForm showConfirmedBanner={confirmed === "1"} showOAuthError={oauthError === "1"} />
     </AuthCard>
   );
 }

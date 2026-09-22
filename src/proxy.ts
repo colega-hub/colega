@@ -15,5 +15,8 @@ export default async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|trpc|_next|_vercel|.*\\..*).*)"],
+  // "auth" excluded so next-intl never rewrites /auth/callback (the Google OAuth redirect
+  // target — see src/app/auth/callback/route.ts) to a locale-prefixed /en/auth/callback, which
+  // has no matching route and would 404 before the OAuth code exchange ever runs.
+  matcher: ["/((?!api|trpc|_next|_vercel|auth|.*\\..*).*)"],
 };

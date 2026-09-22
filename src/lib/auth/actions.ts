@@ -1,6 +1,7 @@
 "use server";
 
 import { redirect } from "@/i18n/navigation";
+import { redirect as redirectToExternalUrl } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import { siteUrl } from "@/lib/supabase/site-url";
@@ -139,4 +140,51 @@ export async function forgotPassword(
     return { status: "error", code: mapAuthErrorToCode(error) };
   }
   return { status: "success" };
+}
+
+export type OAuthActionState = {
+  status: "idle" | "error";
+  code?: AuthErrorCode | "not_configured";
+};
+
+/**
+ * Google sign-in, initiated server-side per Supabase's own documented Next.js App Router
+ * pattern: signInWithOAuth() computes a PKCE code_verifier and the provider authorize URL —
+ * no network round-trip to Supabase happens at this step, it only errors on missing/bad
+ * config — and the code_verifier is written to a cookie via this same server client (the exact
+ * cookie adapter src/lib/supabase/server.ts wires to Next's cookies()), so it's there for
+ * src/app/auth/callback/route.ts to read back when exchanging the code for a session.
+ *
+ * `redirectTo` always points at OUR OWN callback route (never Google or Supabase directly) —
+ * built from `siteUrl` (see that file: explicit NEXT_PUBLIC_SITE_URL, else Netlify's own URL
+ * env var, else localhost), so this is `http://localhost:3000/auth/callback?...` in dev and
+ * `https://colegapro.com/auth/callback?...` in production with no hardcoded domain either way
+ * (AGENTS: "Do not hardcode localhost into production behavior"). `next` carries the caller's
+ * locale through the round trip to Google and back (Section 11: locale preservation) — the
+ * callback route reads it and is the one that actually redirects the browser there.
+ */
+export async function signInWithGoogle(
+  _prevState: OAuthActionState,
+  formData: FormData
+): Promise<OAuthActionState> {
+  const locale = readLocale(formData);
+  if (!isSupabaseConfigured) return { status: "error", code: "not_configured" };
+
+  const supabase = await createClient();
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: `${siteUrl}/auth/callback?next=${encodeURIComponent(`/${locale}/account`)}`,
+    },
+  });
+
+  if (error || !data.url) {
+    logAuthError("signInWithGoogle", error ?? new Error("signInWithOAuth returned no url"));
+    return { status: "error", code: error ? mapAuthErrorToCode(error) : "oauth_failed" };
+  }
+
+  // data.url is Supabase's own /auth/v1/authorize endpoint (which then forwards to Google) —
+  // an external origin from this app's point of view, so this uses next/navigation's plain
+  // redirect() rather than next-intl's typed, internal-app-paths-only wrapper above.
+  return redirectToExternalUrl(data.url);
 }

@@ -12,7 +12,13 @@ import { GoogleButton } from "./GoogleButton";
 
 const initialState: AuthActionState = { status: "idle" };
 
-export function LoginForm({ showConfirmedBanner }: { showConfirmedBanner?: boolean }) {
+export function LoginForm({
+  showConfirmedBanner,
+  showOAuthError,
+}: {
+  showConfirmedBanner?: boolean;
+  showOAuthError?: boolean;
+}) {
   const t = useTranslations("auth.login");
   const tErrors = useTranslations("auth.errors");
   const locale = useLocale();
@@ -32,6 +38,12 @@ export function LoginForm({ showConfirmedBanner }: { showConfirmedBanner?: boole
       {showConfirmedBanner && user && (
         <p className="mb-6 rounded-xl border border-accent/30 bg-accent/10 px-4 py-3 text-center text-sm text-accent-strong">
           {t("confirmedBanner")}
+        </p>
+      )}
+
+      {showOAuthError && (
+        <p className="mb-6 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-center text-sm text-red-400">
+          {tErrors("oauth_failed")}
         </p>
       )}
 
