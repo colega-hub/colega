@@ -83,7 +83,7 @@ export function ResetPasswordForm() {
     setSubmitting(false);
 
     if (error) {
-      setErrorCode(mapAuthErrorToCode(error.message));
+      setErrorCode(mapAuthErrorToCode(error));
       return;
     }
 

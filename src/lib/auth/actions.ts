@@ -5,7 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import { siteUrl } from "@/lib/supabase/site-url";
 import { ensureProfile } from "./profile";
-import { mapAuthErrorToCode, type AuthErrorCode } from "./errors";
+import { logAuthError, mapAuthErrorToCode, type AuthErrorCode } from "./errors";
 
 export type AuthActionState = {
   status: "idle" | "error" | "success";
@@ -31,8 +31,14 @@ export async function login(
   const supabase = await createClient();
   const { data, error } = await supabase.auth.signInWithPassword({ email, password });
 
-  if (error) return { status: "error", code: mapAuthErrorToCode(error.message) };
-  if (!data.user) return { status: "error", code: "unknown" };
+  if (error) {
+    logAuthError("login", error);
+    return { status: "error", code: mapAuthErrorToCode(error) };
+  }
+  if (!data.user) {
+    logAuthError("login", new Error("signInWithPassword returned no error but no user either"));
+    return { status: "error", code: "unknown" };
+  }
 
   // Lazily repairs a missing `profiles` row — see ensureProfile's doc comment. Never blocks
   // sign-in: a website account without a profile row yet is still a fully authenticated
@@ -70,8 +76,14 @@ export async function signup(
     },
   });
 
-  if (error) return { status: "error", code: mapAuthErrorToCode(error.message) };
-  if (!data.user) return { status: "error", code: "unknown" };
+  if (error) {
+    logAuthError("signup", error);
+    return { status: "error", code: mapAuthErrorToCode(error) };
+  }
+  if (!data.user) {
+    logAuthError("signup", new Error("signUp returned no error but no user either"));
+    return { status: "error", code: "unknown" };
+  }
 
   // A null session means Supabase's "confirm your email" setting is enabled on this project —
   // the auth.users row is REAL, but there's no session to act on yet. Never report this as a
@@ -122,6 +134,9 @@ export async function forgotPassword(
   // Deliberately the same response whether or not the email is registered — distinguishing
   // the two would let this form enumerate real accounts. Supabase's own API behaves the same
   // way for this call.
-  if (error) return { status: "error", code: mapAuthErrorToCode(error.message) };
+  if (error) {
+    logAuthError("forgotPassword", error);
+    return { status: "error", code: mapAuthErrorToCode(error) };
+  }
   return { status: "success" };
 }
