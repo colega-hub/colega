@@ -3,6 +3,7 @@
 import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { isExternalHref } from "@/lib/download";
 import type { ReactNode, ButtonHTMLAttributes } from "react";
 
 type Variant = "primary" | "secondary" | "outline" | "ghost";
@@ -69,6 +70,24 @@ export function Button(props: ButtonAsButton | ButtonAsLink) {
   };
 
   if ("href" in props && props.href) {
+    // Absolute URLs (e.g. the installer download) skip the locale-aware Link so they're never
+    // rewritten with a locale prefix.
+    if (isExternalHref(props.href)) {
+      return (
+        <motion.div {...motionProps} className="inline-block">
+          <a
+            href={props.href}
+            target={props.target}
+            rel={props.rel}
+            onClick={props.onClick}
+            className={classes}
+          >
+            {content}
+          </a>
+        </motion.div>
+      );
+    }
+
     return (
       <motion.div {...motionProps} className="inline-block">
         <Link

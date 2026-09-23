@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/Badge";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { GlowBackground } from "@/components/ui/GlowBackground";
+import { WINDOWS_DOWNLOAD_URL } from "@/lib/download";
 
 export function DownloadTeaser() {
   const t = useTranslations("downloadTeaser");
@@ -35,7 +36,7 @@ export function DownloadTeaser() {
                 </h3>
                 <p className="mt-1 text-sm text-muted">{t("windows.requirement")}</p>
               </div>
-              <Button href="/download" className="w-full" icon={<ArrowRight size={16} />}>
+              <Button href={WINDOWS_DOWNLOAD_URL} className="w-full" icon={<ArrowRight size={16} />}>
                 {t("windows.cta")}
               </Button>
             </div>
@@ -45,7 +46,7 @@ export function DownloadTeaser() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/[0.06] text-foreground">
                   <Apple size={22} strokeWidth={1.75} />
                 </div>
-                <Badge>{t("betaBadge")}</Badge>
+                <Badge>{t("comingSoonBadge")}</Badge>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-foreground">
@@ -53,12 +54,7 @@ export function DownloadTeaser() {
                 </h3>
                 <p className="mt-1 text-sm text-muted">{t("mac.requirement")}</p>
               </div>
-              <Button
-                href="/download"
-                variant="outline"
-                className="w-full"
-                icon={<ArrowRight size={16} />}
-              >
+              <Button variant="outline" className="w-full" disabled>
                 {t("mac.cta")}
               </Button>
             </div>

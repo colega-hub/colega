@@ -18,7 +18,7 @@
     },
     "download": {
       "title": "Download — Colega",
-      "description": "Download Colega for Windows or Mac."
+      "description": "Download Colega for Windows. Mac coming soon."
     },
     "privacy": {
       "title": "Privacy Policy — Colega",
@@ -73,7 +73,7 @@
     "subtext": "Colega is there when you need a hand. Share your screen, talk, or just say what you need — Colega helps with the work in front of you.",
     "ctaPrimary": "Get Started",
     "ctaWindows": "Download for Windows",
-    "ctaMac": "Or download for Mac",
+    "ctaMac": "Mac version coming soon",
     "demo": {
       "inputPlaceholder": "What are you working on?",
       "shareScreen": "Share screen",
@@ -289,7 +289,7 @@
   "downloadTeaser": {
     "eyebrow": "Download",
     "title": "Get Colega on your desktop",
-    "description": "Available for Windows and Mac. Free to start, no credit card required.",
+    "description": "Available now for Windows, Mac coming soon. Free to start, no credit card required.",
     "betaBadge": "Beta access",
     "windows": {
       "title": "Windows",
@@ -299,8 +299,9 @@
     "mac": {
       "title": "Mac",
       "requirement": "macOS 13 Ventura or later",
-      "cta": "Download for Mac"
-    }
+      "cta": "Coming soon"
+    },
+    "comingSoonBadge": "Coming soon"
   },
   "pricing": {
     "eyebrow": "Pricing",
@@ -457,7 +458,7 @@
       "comparePlans": "Compare plans",
       "faq": "FAQ",
       "downloadWindows": "Download for Windows",
-      "downloadMac": "Download for Mac",
+      "downloadMac": "Mac (coming soon)",
       "releaseNotes": "Release notes",
       "privacy": "Privacy",
       "terms": "Terms",
@@ -557,7 +558,7 @@
       "teams": "Teams"
     },
     "downloadWindows": "Download for Windows",
-    "downloadMac": "Download for Mac",
+    "downloadMac": "Mac — coming soon",
     "organizationsEmpty": "You're not part of any organization yet.",
     "roles": {
       "owner": "Owner",
@@ -569,16 +570,17 @@
   "download": {
     "badge": "Beta access",
     "title": "Download Colega",
-    "description": "Available for Windows and Mac. Free during beta — no credit card required.",
+    "description": "Available now for Windows, Mac coming soon. Free during beta — no credit card required.",
     "freeNote": "Free during beta · No credit card required",
-    "version": "Version",
     "windows": {
       "title": "Windows",
-      "requirement": "Windows 10 & 11 (64-bit)"
+      "requirement": "Windows 10 & 11 (64-bit)",
+      "installer": "64-bit installer"
     },
     "mac": {
       "title": "Mac",
-      "requirement": "macOS 13 Ventura or later"
+      "requirement": "macOS 13 Ventura or later",
+      "notYetAvailable": "Not available yet"
     },
     "downloadFor": "Download for {platform}",
     "requirements": {
@@ -620,7 +622,9 @@
           ]
         }
       ]
-    }
+    },
+    "latestVersion": "Latest version",
+    "comingSoon": "Coming soon"
   },
   "legal": {
     "privacy": {

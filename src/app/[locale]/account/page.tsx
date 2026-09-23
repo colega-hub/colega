@@ -11,6 +11,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { buildMetadata } from "@/lib/seo";
+import { WINDOWS_DOWNLOAD_URL } from "@/lib/download";
 
 export async function generateMetadata({
   params,
@@ -135,10 +136,10 @@ export default async function AccountPage({
                 {t("sections.download")}
               </h2>
               <div className="mt-4 flex flex-col gap-3 sm:flex-row">
-                <Button href="/download" variant="outline" className="flex-1" icon={<Monitor size={16} />}>
+                <Button href={WINDOWS_DOWNLOAD_URL} variant="outline" className="flex-1" icon={<Monitor size={16} />}>
                   {t("downloadWindows")}
                 </Button>
-                <Button href="/download" variant="outline" className="flex-1" icon={<Apple size={16} />}>
+                <Button variant="outline" className="flex-1" icon={<Apple size={16} />} disabled>
                   {t("downloadMac")}
                 </Button>
               </div>

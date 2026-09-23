@@ -18,7 +18,7 @@
     },
     "download": {
       "title": "İndir — Colega",
-      "description": "Colega'yı Windows veya Mac için indir."
+      "description": "Colega'yı Windows için indir. Mac yakında."
     },
     "privacy": {
       "title": "Gizlilik Politikası — Colega",
@@ -73,7 +73,7 @@
     "subtext": "Colega, yardıma ihtiyacın olduğunda yanında. Ekranını paylaş, konuş ya da ne istediğini söyle; Colega o an yaptığın işe göre yardımcı olsun.",
     "ctaPrimary": "Hemen Başla",
     "ctaWindows": "Windows için indir",
-    "ctaMac": "Ya da Mac için indir",
+    "ctaMac": "Mac sürümü yakında",
     "demo": {
       "inputPlaceholder": "Şu an ne üzerinde çalışıyorsun?",
       "shareScreen": "Ekranı paylaş",
@@ -289,7 +289,7 @@
   "downloadTeaser": {
     "eyebrow": "İndir",
     "title": "Colega'yı masaüstüne al",
-    "description": "Windows ve Mac için hazır. Başlamak ücretsiz, kredi kartı gerekmez.",
+    "description": "Şimdi Windows için hazır, Mac yakında. Başlamak ücretsiz, kredi kartı gerekmez.",
     "betaBadge": "Beta erişimi",
     "windows": {
       "title": "Windows",
@@ -299,8 +299,9 @@
     "mac": {
       "title": "Mac",
       "requirement": "macOS 13 Ventura veya üzeri",
-      "cta": "Mac için indir"
-    }
+      "cta": "Yakında"
+    },
+    "comingSoonBadge": "Yakında"
   },
   "pricing": {
     "eyebrow": "Fiyatlandırma",
@@ -457,7 +458,7 @@
       "comparePlans": "Planları karşılaştır",
       "faq": "SSS",
       "downloadWindows": "Windows için indir",
-      "downloadMac": "Mac için indir",
+      "downloadMac": "Mac (yakında)",
       "releaseNotes": "Sürüm notları",
       "privacy": "Gizlilik",
       "terms": "Koşullar",
@@ -557,7 +558,7 @@
       "teams": "Takımlar"
     },
     "downloadWindows": "Windows için indir",
-    "downloadMac": "Mac için indir",
+    "downloadMac": "Mac — yakında",
     "organizationsEmpty": "Henüz bir organizasyona üye değilsin.",
     "roles": {
       "owner": "Sahip",
@@ -569,16 +570,17 @@
   "download": {
     "badge": "Beta erişimi",
     "title": "Colega'yı indir",
-    "description": "Windows ve Mac için hazır. Beta süresince ücretsiz — kredi kartı gerekmez.",
+    "description": "Şimdi Windows için hazır, Mac yakında. Beta süresince ücretsiz — kredi kartı gerekmez.",
     "freeNote": "Beta süresince ücretsiz · Kredi kartı gerekmez",
-    "version": "Sürüm",
     "windows": {
       "title": "Windows",
-      "requirement": "Windows 10 ve 11 (64-bit)"
+      "requirement": "Windows 10 ve 11 (64-bit)",
+      "installer": "64-bit kurulum dosyası"
     },
     "mac": {
       "title": "Mac",
-      "requirement": "macOS 13 Ventura veya üzeri"
+      "requirement": "macOS 13 Ventura veya üzeri",
+      "notYetAvailable": "Henüz mevcut değil"
     },
     "downloadFor": "{platform} için indir",
     "requirements": {
@@ -620,7 +622,9 @@
           ]
         }
       ]
-    }
+    },
+    "latestVersion": "En son sürüm",
+    "comingSoon": "Yakında"
   },
   "legal": {
     "privacy": {

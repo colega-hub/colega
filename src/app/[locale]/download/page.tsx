@@ -9,6 +9,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { DownloadCard } from "@/components/download/DownloadCard";
 import { buildMetadata } from "@/lib/seo";
+import { WINDOWS_DOWNLOAD_URL } from "@/lib/download";
 
 export async function generateMetadata({
   params,
@@ -71,12 +72,11 @@ export default async function DownloadPage({
                   icon={<MonitorDown size={26} strokeWidth={1.75} />}
                   platform={t("windows.title")}
                   requirement={t("windows.requirement")}
-                  version="0.9.2"
-                  size="182 MB"
+                  details={[t("latestVersion"), t("windows.installer")]}
                   badgeLabel={t("badge")}
-                  versionLabel={t("version")}
                   ctaLabel={t("downloadFor", { platform: t("windows.title") })}
                   freeNote={t("freeNote")}
+                  href={WINDOWS_DOWNLOAD_URL}
                 />
               </Reveal>
               <Reveal delay={0.08}>
@@ -84,11 +84,9 @@ export default async function DownloadPage({
                   icon={<Apple size={26} strokeWidth={1.75} />}
                   platform={t("mac.title")}
                   requirement={t("mac.requirement")}
-                  version="0.9.2"
-                  size="164 MB"
-                  badgeLabel={t("badge")}
-                  versionLabel={t("version")}
-                  ctaLabel={t("downloadFor", { platform: t("mac.title") })}
+                  details={[t("mac.notYetAvailable")]}
+                  badgeLabel={t("comingSoon")}
+                  ctaLabel={t("comingSoon")}
                   freeNote={t("freeNote")}
                 />
               </Reveal>

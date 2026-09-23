@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Container } from "@/components/ui/Container";
 import { GlowBackground } from "@/components/ui/GlowBackground";
 import { ScreenShareDemo } from "@/components/landing/ScreenShareDemo";
+import { WINDOWS_DOWNLOAD_URL } from "@/lib/download";
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -62,7 +63,7 @@ export function Hero() {
                 {t("ctaPrimary")}
               </Button>
               <Button
-                href="/download"
+                href={WINDOWS_DOWNLOAD_URL}
                 variant="outline"
                 size="lg"
                 icon={<MonitorDown size={16} />}
@@ -76,7 +77,7 @@ export function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.28 }}
             >
-              <Button href="/download" variant="ghost" size="sm" icon={<Apple size={14} />}>
+              <Button variant="ghost" size="sm" icon={<Apple size={14} />} disabled>
                 {t("ctaMac")}
               </Button>
             </motion.div>

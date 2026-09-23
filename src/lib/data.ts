@@ -17,6 +17,7 @@ import {
   Workflow,
   Users,
 } from "lucide-react";
+import { WINDOWS_DOWNLOAD_URL } from "@/lib/download";
 
 export const navItems = [
   { id: "features", href: "/#features" },
@@ -128,7 +129,7 @@ export const footerGroups = [
   {
     id: "download",
     links: [
-      { id: "downloadWindows", href: "/download" },
+      { id: "downloadWindows", href: WINDOWS_DOWNLOAD_URL },
       { id: "downloadMac", href: "/download" },
       { id: "releaseNotes", href: "/download#release-notes" },
     ],

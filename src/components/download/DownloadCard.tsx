@@ -4,28 +4,27 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 
 export function DownloadCard({
   icon,
   platform,
   requirement,
-  version,
-  size,
+  details,
   badgeLabel,
-  versionLabel,
   ctaLabel,
   freeNote,
+  href,
 }: {
   icon: ReactNode;
   platform: string;
   requirement: string;
-  version: string;
-  size: string;
+  details: string[];
   badgeLabel: string;
-  versionLabel: string;
   ctaLabel: string;
   freeNote: string;
+  /** Omit to render the CTA disabled (platform not available yet). */
+  href?: string;
 }) {
   return (
     <motion.div
@@ -46,16 +45,23 @@ export function DownloadCard({
       </div>
 
       <div className="flex items-center gap-4 border-y border-border py-4 text-xs text-muted-dim">
-        <span>
-          {versionLabel} {version}
-        </span>
-        <span className="h-1 w-1 rounded-full bg-muted-dim/50" />
-        <span>{size}</span>
+        {details.map((detail, i) => (
+          <Fragment key={detail}>
+            {i > 0 && <span className="h-1 w-1 rounded-full bg-muted-dim/50" />}
+            <span>{detail}</span>
+          </Fragment>
+        ))}
       </div>
 
-      <Button className="w-full" icon={<ArrowRight size={16} />}>
-        {ctaLabel}
-      </Button>
+      {href ? (
+        <Button href={href} className="w-full" icon={<ArrowRight size={16} />}>
+          {ctaLabel}
+        </Button>
+      ) : (
+        <Button className="w-full" icon={<ArrowRight size={16} />} disabled>
+          {ctaLabel}
+        </Button>
+      )}
       <p className="text-center text-xs text-muted-dim">{freeNote}</p>
     </motion.div>
   );

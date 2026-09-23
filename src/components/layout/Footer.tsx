@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { footerGroups } from "@/lib/data";
+import { isExternalHref } from "@/lib/download";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -44,12 +45,21 @@ export function Footer() {
               <ul className="flex flex-col gap-2.5">
                 {group.links.map((link) => (
                   <li key={link.id}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-muted-dim transition-colors hover:text-foreground"
-                    >
-                      {t(`links.${link.id}`)}
-                    </Link>
+                    {isExternalHref(link.href) ? (
+                      <a
+                        href={link.href}
+                        className="text-sm text-muted-dim transition-colors hover:text-foreground"
+                      >
+                        {t(`links.${link.id}`)}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-sm text-muted-dim transition-colors hover:text-foreground"
+                      >
+                        {t(`links.${link.id}`)}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
