@@ -142,34 +142,3 @@ export const footerGroups = [
     ],
   },
 ] as const;
-
-// Coordinates are percentages within a 2:1 equirectangular map (x = longitude, y = latitude),
-// so they line up with WorldMap's viewBox regardless of rendered size.
-export type PresenceCountry = {
-  id: string;
-  flag: string;
-  /** Marker position on the map. */
-  x: number;
-  y: number;
-  /** Floating chip anchor. Defaults near the marker; a few are nudged apart to avoid
-   * overlapping in dense regions (e.g. Western Europe), which is when a connector line is drawn. */
-  chipX?: number;
-  chipY?: number;
-};
-
-export const presenceCountries: PresenceCountry[] = [
-  { id: "us", flag: "🇺🇸", x: 22.7, y: 28.1 },
-  { id: "ca", flag: "🇨🇦", x: 29.0, y: 24.8 },
-  { id: "br", flag: "🇧🇷", x: 36.7, y: 58.8 },
-  { id: "gb", flag: "🇬🇧", x: 50.0, y: 21.4, chipX: 40, chipY: 9 },
-  { id: "fr", flag: "🇫🇷", x: 50.7, y: 22.9, chipX: 48, chipY: 5 },
-  { id: "nl", flag: "🇳🇱", x: 51.4, y: 20.9, chipX: 62.5, chipY: 12 },
-  { id: "de", flag: "🇩🇪", x: 53.7, y: 20.8, chipX: 56, chipY: 7.5 },
-  { id: "tr", flag: "🇹🇷", x: 59.1, y: 27.8 },
-  { id: "za", flag: "🇿🇦", x: 57.8, y: 64.3 },
-  { id: "ae", flag: "🇦🇪", x: 65.4, y: 36.0 },
-  { id: "in", flag: "🇮🇳", x: 71.4, y: 34.1 },
-  { id: "sg", flag: "🇸🇬", x: 78.8, y: 49.3 },
-  { id: "jp", flag: "🇯🇵", x: 88.8, y: 30.2 },
-  { id: "au", flag: "🇦🇺", x: 87.2, y: 63.9 },
-];

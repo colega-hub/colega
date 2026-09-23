@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/ui/Reveal";
 import { GlowBackground } from "@/components/ui/GlowBackground";
+import { Logo } from "@/components/ui/Logo";
 
 export function AuthCard({
   title,
@@ -24,9 +25,7 @@ export function AuthCard({
       <Reveal className="relative w-full max-w-md">
         <div className="mb-8 flex justify-center">
           <Link href="/" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-accent-strong to-accent-2 text-sm font-bold text-white shadow-[0_0_20px_-4px_rgba(91,124,250,0.8)]">
-              C
-            </span>
+            <Logo className="h-9 w-9" />
             <span className="text-lg font-semibold tracking-tight text-foreground">
               Colega
             </span>

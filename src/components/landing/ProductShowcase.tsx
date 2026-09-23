@@ -8,6 +8,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlowBackground } from "@/components/ui/GlowBackground";
 import { Reveal } from "@/components/ui/Reveal";
+import { Logo } from "@/components/ui/Logo";
 
 const blocks = [
   { id: "chat", icon: MessageSquare },
@@ -42,9 +43,7 @@ export function ProductShowcase() {
           >
             <div className="flex items-center justify-between border-b border-border pb-5">
               <div className="flex items-center gap-2">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent-strong to-accent-2 text-xs font-bold text-white">
-                  C
-                </span>
+                <Logo className="h-8 w-8" />
                 <span className="text-sm font-medium text-foreground">
                   {t("workspaceLabel")}
                 </span>

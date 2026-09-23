@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "Colega — Just work. Colega keeps up.",
-      "description": "Colega is a desktop companion that follows your context when you share your screen, remembers what matters, and steps in when something deserves your attention."
+      "description": "Colega is a desktop companion you can share your screen with, talk to, and ask for help — it understands the context, remembers what matters, and helps with the work in front of you."
     },
     "login": {
       "title": "Log in — Colega",
@@ -70,7 +70,7 @@
   "hero": {
     "badge": "Now in beta — Windows & Mac",
     "headline": "Just work.\nColega keeps up.",
-    "subtext": "Share your screen when you want a second pair of eyes. Colega understands the context, remembers what matters, and steps in when something deserves your attention.",
+    "subtext": "Colega is there when you need a hand. Share your screen, talk, or just say what you need — Colega helps with the work in front of you.",
     "ctaPrimary": "Get Started",
     "ctaWindows": "Download for Windows",
     "ctaMac": "Or download for Mac",
@@ -100,7 +100,7 @@
   "features": {
     "eyebrow": "Why Colega",
     "title": "Less like software. More like backup.",
-    "description": "Share your screen when you want it, and Colega follows the context — remembering details, catching what you'd miss, and staying quiet the rest of the time.",
+    "description": "Share your screen when you want it, and Colega follows along — remembering details and catching what you'd miss, right when it matters.",
     "items": {
       "sees": {
         "title": "Sees the same screen you do",
@@ -196,7 +196,7 @@
       },
       "keepUp": {
         "title": "Colega keeps up",
-        "description": "Notes, nudges, and reminders show up right when they're useful. Quiet the rest of the time."
+        "description": "Notes, nudges, and reminders show up right when they're useful — only while you're working with Colega."
       }
     }
   },
@@ -231,27 +231,6 @@
       }
     }
   },
-  "globalPresence": {
-    "eyebrow": "Global",
-    "title": "Built to work across borders.",
-    "description": "From Istanbul to Singapore, teams run Colega across time zones, languages, and ways of working — without missing a step.",
-    "countries": {
-      "tr": "Türkiye",
-      "us": "United States",
-      "ca": "Canada",
-      "gb": "United Kingdom",
-      "de": "Germany",
-      "fr": "France",
-      "nl": "Netherlands",
-      "ae": "United Arab Emirates",
-      "in": "India",
-      "sg": "Singapore",
-      "jp": "Japan",
-      "au": "Australia",
-      "br": "Brazil",
-      "za": "South Africa"
-    }
-  },
   "testimonials": {
     "eyebrow": "Loved by teams",
     "title": "What people say after switching",
@@ -264,7 +243,7 @@
         "company": "Northwind"
       },
       {
-        "quote": "I like that it stays quiet until there's actually something worth saying.",
+        "quote": "I like that it only speaks up when I actually need it — no random notifications.",
         "name": "Marcus Ade",
         "role": "Founder",
         "company": "Fieldnote"
@@ -276,13 +255,13 @@
         "company": "Lumen"
       },
       {
-        "quote": "It caught a pricing mismatch on a client call before I even noticed it myself.",
+        "quote": "It caught a pricing mismatch while I was screen-sharing on a client call — I hadn't even noticed.",
         "name": "Tomasz Krol",
         "role": "Account Manager",
         "company": "Vertex Labs"
       },
       {
-        "quote": "Small team, big workload — this quietly picks up the things we'd otherwise forget.",
+        "quote": "Small team, big workload — I tell it what to remember and it actually does.",
         "name": "Sofia Rinaldi",
         "role": "Co-founder",
         "company": "Orbit"
@@ -436,7 +415,7 @@
     "items": [
       {
         "question": "What is Colega?",
-        "answer": "Colega is a desktop companion that sits alongside your work. When you share your screen, it understands the context, remembers what matters, and steps in when something's worth your attention — quiet the rest of the time."
+        "answer": "Colega is a desktop companion that helps while you work. Share your screen, talk to it, or ask a question, and it understands the context, remembers what matters, and helps with what's in front of you."
       },
       {
         "question": "Does it work on Windows and Mac?",
@@ -458,12 +437,12 @@
   },
   "finalCta": {
     "title": "Less switching. Less remembering.\nMore getting things done.",
-    "description": "Join the beta and let Colega catch what matters while you focus on the work in front of you.",
+    "description": "Join the beta and get help from Colega exactly when you need it — without losing focus on the work in front of you.",
     "ctaPrimary": "Get Started",
     "ctaSecondary": "Download Now"
   },
   "footer": {
-    "tagline": "There when you need it. Quiet when you don't.",
+    "tagline": "There when you need it.",
     "groups": {
       "product": "Product",
       "pricing": "Pricing",

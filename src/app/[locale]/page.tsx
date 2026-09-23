@@ -7,7 +7,6 @@ import { ProductShowcase } from "@/components/landing/ProductShowcase";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { UseCases } from "@/components/landing/UseCases";
 import { DownloadTeaser } from "@/components/landing/DownloadTeaser";
-import { GlobalPresenceSection } from "@/components/landing/GlobalPresenceSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 import { PricingSection } from "@/components/pricing/PricingSection";
 import { FAQ } from "@/components/landing/FAQ";
@@ -25,7 +24,6 @@ export default function Home() {
         <HowItWorks />
         <UseCases />
         <DownloadTeaser />
-        <GlobalPresenceSection />
         <TestimonialsSection />
         <PricingSection />
         <FAQ />

@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { AccountMenu } from "@/components/layout/AccountMenu";
+import { Logo } from "@/components/ui/Logo";
 import { useSupabaseUser } from "@/hooks/useSupabaseUser";
 import { cn } from "@/lib/utils";
 
@@ -45,9 +46,7 @@ export function Navbar() {
     >
       <Container className="flex h-16 items-center justify-between sm:h-18">
         <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent-strong to-accent-2 text-sm font-bold text-white shadow-[0_0_20px_-4px_rgba(91,124,250,0.8)]">
-            C
-          </span>
+          <Logo className="h-8 w-8" />
           <span className="text-lg font-semibold tracking-tight text-foreground">
             Colega
           </span>

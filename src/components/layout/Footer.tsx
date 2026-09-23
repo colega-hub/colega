@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Globe, MessageCircle, Mail } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
+import { Logo } from "@/components/ui/Logo";
 import { footerGroups } from "@/lib/data";
 
 export function Footer() {
@@ -13,9 +14,7 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-5">
           <div className="col-span-2 flex flex-col gap-4 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent-strong to-accent-2 text-sm font-bold text-white">
-                C
-              </span>
+              <Logo className="h-8 w-8" />
               <span className="text-lg font-semibold tracking-tight text-foreground">
                 Colega
               </span>

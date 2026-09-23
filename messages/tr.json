@@ -2,7 +2,7 @@
   "meta": {
     "home": {
       "title": "Colega — Sen işine bak. Colega yetişir.",
-      "description": "Colega, ekranını paylaştığında bağlamı anlayan, önemli olanları hatırlayan ve dikkat etmen gereken bir şey olduğunda yanında beliren bir masaüstü arkadaşı."
+      "description": "Colega, ekranını paylaşabileceğin, konuşabileceğin ve yardım isteyebileceğin bir masaüstü arkadaşı — bağlamı anlar, önemli olanları hatırlar ve önündeki işe yardımcı olur."
     },
     "login": {
       "title": "Giriş yap — Colega",
@@ -70,7 +70,7 @@
   "hero": {
     "badge": "Şu an beta'da — Windows ve Mac",
     "headline": "Sen işine bak.\nColega yetişir.",
-    "subtext": "İhtiyacın olduğunda ekranını paylaş. Colega bağlamı anlar, önemli olanları hatırlar ve dikkat etmen gereken bir şey olduğunda yanında belirir.",
+    "subtext": "Colega, yardıma ihtiyacın olduğunda yanında. Ekranını paylaş, konuş ya da ne istediğini söyle; Colega o an yaptığın işe göre yardımcı olsun.",
     "ctaPrimary": "Hemen Başla",
     "ctaWindows": "Windows için indir",
     "ctaMac": "Ya da Mac için indir",
@@ -100,7 +100,7 @@
   "features": {
     "eyebrow": "Neden Colega",
     "title": "Bir yazılımdan çok, bir yedeğe benziyor.",
-    "description": "İstediğinde ekranını paylaş, Colega bağlamı yakalar — detayları hatırlar, gözden kaçırabileceğin şeyleri fark eder ve geri kalan zaman sessiz kalır.",
+    "description": "İstediğinde ekranını paylaş, Colega bağlamı yakalar — detayları hatırlar ve gözden kaçırabileceğin şeyleri, tam işine yarayacağı an fark eder.",
     "items": {
       "sees": {
         "title": "Aynı ekranı senle birlikte görür",
@@ -196,7 +196,7 @@
       },
       "keepUp": {
         "title": "Colega yetişir",
-        "description": "Notlar, hatırlatmalar ve dürtmeler tam işine yarayacağı an belirir. Geri kalan zaman sessiz."
+        "description": "Notlar, hatırlatmalar ve dürtmeler tam işine yarayacağı an belirir — yalnızca Colega ile birlikte çalışırken."
       }
     }
   },
@@ -231,27 +231,6 @@
       }
     }
   },
-  "globalPresence": {
-    "eyebrow": "Global",
-    "title": "Sınırların ötesinde çalışmak için tasarlandı.",
-    "description": "İstanbul'dan Singapur'a, ekipler farklı saat dilimlerinde ve çalışma şekillerinde Colega kullanıyor — hiçbir adımı kaçırmadan.",
-    "countries": {
-      "tr": "Türkiye",
-      "us": "Amerika Birleşik Devletleri",
-      "ca": "Kanada",
-      "gb": "Birleşik Krallık",
-      "de": "Almanya",
-      "fr": "Fransa",
-      "nl": "Hollanda",
-      "ae": "Birleşik Arap Emirlikleri",
-      "in": "Hindistan",
-      "sg": "Singapur",
-      "jp": "Japonya",
-      "au": "Avustralya",
-      "br": "Brezilya",
-      "za": "Güney Afrika"
-    }
-  },
   "testimonials": {
     "eyebrow": "Ekiplerin tercihi",
     "title": "Kullananlar ne diyor",
@@ -264,7 +243,7 @@
         "company": "Northwind"
       },
       {
-        "quote": "Söyleyecek gerçekten bir şey olana kadar sessiz kalması hoşuma gidiyor.",
+        "quote": "Sadece gerçekten ihtiyacım olduğunda konuşması hoşuma gidiyor — rastgele bildirim yok.",
         "name": "Marcus Ade",
         "role": "Kurucu",
         "company": "Fieldnote"
@@ -276,13 +255,13 @@
         "company": "Lumen"
       },
       {
-        "quote": "Ben fark etmeden önce müşteri görüşmesindeki fiyat uyuşmazlığını yakaladı.",
+        "quote": "Ekranımı paylaştığım bir müşteri görüşmesinde fiyat uyuşmazlığını yakaladı — ben fark etmemiştim bile.",
         "name": "Tomasz Krol",
         "role": "Müşteri Yöneticisi",
         "company": "Vertex Labs"
       },
       {
-        "quote": "Küçük bir ekibiz ama iş yükümüz büyük — gözden kaçırdığımız şeyleri sessizce takip ediyor.",
+        "quote": "Küçük bir ekibiz ama iş yükümüz büyük — ona ne hatırlaması gerektiğini söylüyorum, o da hatırlıyor.",
         "name": "Sofia Rinaldi",
         "role": "Kurucu Ortak",
         "company": "Orbit"
@@ -436,7 +415,7 @@
     "items": [
       {
         "question": "Colega nedir?",
-        "answer": "Colega, işinin yanında duran bir masaüstü arkadaşı. Ekranını paylaştığında bağlamı anlar, önemli olanları hatırlar ve değdiğinde yanında belirir — geri kalan zaman sessiz kalır."
+        "answer": "Colega, çalışırken yanında olan bir masaüstü arkadaşı. Ekranını paylaş, onunla konuş ya da bir şey sor; bağlamı anlar, önemli olanları hatırlar ve önündeki işe yardımcı olur."
       },
       {
         "question": "Windows ve Mac'te çalışıyor mu?",
@@ -458,12 +437,12 @@
   },
   "finalCta": {
     "title": "Daha az geçiş. Daha az hatırlama derdi.\nDaha çok iş çıkarma.",
-    "description": "Beta'ya katıl, önemli olanı Colega yakalasın — sen önündeki işe odaklan.",
+    "description": "Beta'ya katıl, ihtiyacın olduğunda Colega'dan yardım al — önündeki işten kopmadan.",
     "ctaPrimary": "Hemen Başla",
     "ctaSecondary": "Şimdi İndir"
   },
   "footer": {
-    "tagline": "İhtiyacın olduğunda yanında. Olmadığında sessiz.",
+    "tagline": "İhtiyacın olduğunda yanında.",
     "groups": {
       "product": "Ürün",
       "pricing": "Fiyatlandırma",
