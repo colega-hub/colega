@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { AuthCard } from "@/components/auth/AuthCard";
 import { LoginForm } from "@/components/auth/LoginForm";
 import { buildMetadata } from "@/lib/seo";
+import { safeNextPath } from "@/lib/auth/next-path";
 
 export async function generateMetadata({
   params,
@@ -17,10 +18,10 @@ export default async function LoginPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ confirmed?: string; oauth_error?: string }>;
+  searchParams: Promise<{ confirmed?: string; oauth_error?: string; next?: string }>;
 }) {
   const { locale } = await params;
-  const { confirmed, oauth_error: oauthError } = await searchParams;
+  const { confirmed, oauth_error: oauthError, next } = await searchParams;
   const t = await getTranslations({ locale, namespace: "auth.login" });
 
   return (
@@ -31,7 +32,11 @@ export default async function LoginPage({
       footerLinkLabel={t("footerLink")}
       footerLinkHref="/signup"
     >
-      <LoginForm showConfirmedBanner={confirmed === "1"} showOAuthError={oauthError === "1"} />
+      <LoginForm
+        showConfirmedBanner={confirmed === "1"}
+        showOAuthError={oauthError === "1"}
+        next={safeNextPath(next) ?? undefined}
+      />
     </AuthCard>
   );
 }

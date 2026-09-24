@@ -6,6 +6,7 @@ import { createClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import { siteUrl } from "@/lib/supabase/site-url";
 import { ensureProfile } from "./profile";
+import { safeNextPath } from "./next-path";
 import { logAuthError, mapAuthErrorToCode, type AuthErrorCode } from "./errors";
 
 export type AuthActionState = {
@@ -46,7 +47,7 @@ export async function login(
   // account, exactly like the desktop app's own `profileIncomplete` recovery path.
   await ensureProfile(supabase, data.user);
 
-  return redirect({ href: "/account", locale });
+  return redirect({ href: safeNextPath(formData.get("next")) ?? "/account", locale });
 }
 
 export async function signup(
@@ -174,7 +175,9 @@ export async function signInWithGoogle(
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: `${siteUrl}/auth/callback?next=${encodeURIComponent(`/${locale}/account`)}`,
+      redirectTo: `${siteUrl}/auth/callback?next=${encodeURIComponent(
+        `/${locale}${safeNextPath(formData.get("next")) ?? "/account"}`
+      )}`,
     },
   });
 

@@ -407,6 +407,14 @@
         "workspacesPro": "3",
         "workspacesTeam": "Unlimited"
       }
+    },
+    "checkout": {
+      "loading": "Opening checkout…",
+      "errors": {
+        "already_subscribed": "You already have an active subscription. Manage it from your account.",
+        "invalid_request": "Something is wrong with this selection. Please refresh and try again.",
+        "unavailable": "Checkout is unavailable right now. Please try again in a moment."
+      }
     }
   },
   "faq": {

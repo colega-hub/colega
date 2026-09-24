@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { TeamSeatSelector } from "@/components/pricing/TeamSeatSelector";
+import { CheckoutButton } from "@/components/pricing/CheckoutButton";
 import { cn } from "@/lib/utils";
 import { getTeamPrice, TEAM_MIN_SEATS } from "@/lib/pricing";
 import type { Plan } from "@/lib/data";
@@ -83,14 +84,24 @@ export function PricingCard({
 
       {isTeam && <TeamSeatSelector seats={seats} onChange={setSeats} />}
 
-      <Button
-        href={isEnterprise ? "/contact" : "/signup"}
-        className="mt-7 w-full"
-        variant={plan.popular ? "primary" : "outline"}
-        icon={isEnterprise ? <MessageCircle size={15} /> : <ArrowRight size={15} />}
-      >
-        {t(`plans.${plan.id}.cta`)}
-      </Button>
+      {plan.id === "pro" || isTeam ? (
+        <CheckoutButton
+          plan={isTeam ? "teams" : "pro"}
+          annual={annual}
+          seats={isTeam ? seats : undefined}
+          label={t(`plans.${plan.id}.cta`)}
+          variant={plan.popular ? "primary" : "outline"}
+        />
+      ) : (
+        <Button
+          href={isEnterprise ? "/contact" : "/signup"}
+          className="mt-7 w-full"
+          variant={plan.popular ? "primary" : "outline"}
+          icon={isEnterprise ? <MessageCircle size={15} /> : <ArrowRight size={15} />}
+        >
+          {t(`plans.${plan.id}.cta`)}
+        </Button>
+      )}
 
       <ul className="mt-8 flex flex-col gap-3.5">
         {features.map((feature) => (

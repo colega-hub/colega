@@ -10,7 +10,7 @@ const initialState: OAuthActionState = { status: "idle" };
 // URLs, all set up outside this codebase — see docs/AGENTS comments in
 // src/lib/auth/actions.ts and src/app/auth/callback/route.ts for the code half). Real
 // supabase.auth.signInWithOAuth() call, no manual OAuth implementation.
-export function GoogleButton({ label }: { label: string }) {
+export function GoogleButton({ label, next }: { label: string; next?: string }) {
   const t = useTranslations("auth");
   const tErrors = useTranslations("auth.errors");
   const locale = useLocale();
@@ -20,6 +20,7 @@ export function GoogleButton({ label }: { label: string }) {
     <div>
       <form action={formAction}>
         <input type="hidden" name="locale" value={locale} />
+        {next && <input type="hidden" name="next" value={next} />}
         <button
           type="submit"
           disabled={pending}

@@ -15,9 +15,11 @@ const initialState: AuthActionState = { status: "idle" };
 export function LoginForm({
   showConfirmedBanner,
   showOAuthError,
+  next,
 }: {
   showConfirmedBanner?: boolean;
   showOAuthError?: boolean;
+  next?: string;
 }) {
   const t = useTranslations("auth.login");
   const tErrors = useTranslations("auth.errors");
@@ -30,8 +32,8 @@ export function LoginForm({
   // email-confirmation link — see useSupabaseUser's doc comment on hash-fragment detection)
   // shouldn't sit on the login form.
   useEffect(() => {
-    if (user) router.replace("/account");
-  }, [user, router]);
+    if (user) router.replace(next ?? "/account");
+  }, [user, router, next]);
 
   return (
     <>
@@ -49,6 +51,7 @@ export function LoginForm({
 
       <form action={formAction} className="flex flex-col gap-5" noValidate>
         <input type="hidden" name="locale" value={locale} />
+        {next && <input type="hidden" name="next" value={next} />}
 
         <FormField
           label={t("emailLabel")}
@@ -101,7 +104,7 @@ export function LoginForm({
         <span className="h-px flex-1 bg-border" />
       </div>
 
-      <GoogleButton label={t("google")} />
+      <GoogleButton label={t("google")} next={next} />
     </>
   );
 }

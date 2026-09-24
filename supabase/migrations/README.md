@@ -1,8 +1,8 @@
 # colega-web migrations
 
 These target the **same Supabase project** the desktop app (`C:\Users\Arda\colega\supabase\migrations`)
-already uses — not a separate database. **Status: `0001`-`0023` are applied to that project**
-(verified via `supabase migration list` — local and remote both show `0023` as current).
+already uses — not a separate database. **Status: `0001`-`0031` are applied to that project**
+(verified via `supabase migration list` — local and remote both show `0031` as current).
 
 `0001`–`0019` are **verbatim, byte-identical copies** of the desktop repo's own migrations of
 the same name (verified with `diff` at copy time) — added here purely so the Supabase CLI, run
@@ -31,3 +31,10 @@ of them.
 
 All are idempotent (`create table if not exists`, `create or replace function`,
 `drop policy if exists` + `create policy`, `on conflict do update`) — safe to re-run.
+
+`0024`–`0030` are desktop-owned, copied here verbatim (verified with `cmp`) for the same history-
+reconciliation reason as `0001`–`0019`. Desktop remains their source of truth.
+
+`0031_paddle_billing.sql` is website-owned (Paddle webhook): adds `subscriptions.additional_seats` /
+`billing_event_at` and propagates purchased seats into `organization_seat_entitlements`. A copy
+also sits in the desktop repo so the shared numbering never collides — next free number is `0032`.

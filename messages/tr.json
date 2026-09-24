@@ -407,6 +407,14 @@
         "workspacesPro": "3",
         "workspacesTeam": "Sınırsız"
       }
+    },
+    "checkout": {
+      "loading": "Ödeme açılıyor…",
+      "errors": {
+        "already_subscribed": "Zaten aktif bir aboneliğiniz var. Hesabınızdan yönetebilirsiniz.",
+        "invalid_request": "Bu seçimde bir sorun var. Sayfayı yenileyip tekrar deneyin.",
+        "unavailable": "Ödeme şu anda kullanılamıyor. Lütfen biraz sonra tekrar deneyin."
+      }
     }
   },
   "faq": {
