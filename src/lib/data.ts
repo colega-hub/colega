@@ -139,6 +139,7 @@ export const footerGroups = [
     links: [
       { id: "privacy", href: "/privacy" },
       { id: "terms", href: "/terms" },
+      { id: "refund", href: "/refund" },
       { id: "contact", href: "/contact" },
     ],
   },

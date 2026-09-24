@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { plans } from "@/lib/data";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -41,6 +42,21 @@ export function PricingSection({
             </RevealItem>
           ))}
         </RevealGroup>
+
+        <p className="mx-auto mt-8 max-w-2xl text-center text-xs text-muted-dim">
+          {t.rich("legalNote.text", {
+            terms: (chunks) => (
+              <Link href="/terms" className="underline hover:text-foreground">
+                {chunks}
+              </Link>
+            ),
+            refund: (chunks) => (
+              <Link href="/refund" className="underline hover:text-foreground">
+                {chunks}
+              </Link>
+            ),
+          })}
+        </p>
       </Container>
     </section>
   );

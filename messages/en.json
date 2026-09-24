@@ -43,6 +43,10 @@
     "account": {
       "title": "Account — Colega",
       "description": "Manage your Colega account."
+    },
+    "refund": {
+      "title": "Refund Policy — Colega",
+      "description": "Colega's 14-day no-questions-asked refund and how refunds work."
     }
   },
   "nav": {
@@ -415,6 +419,9 @@
         "invalid_request": "Something is wrong with this selection. Please refresh and try again.",
         "unavailable": "Checkout is unavailable right now. Please try again in a moment."
       }
+    },
+    "legalNote": {
+      "text": "By continuing you agree to our <terms>Terms of Service</terms> and <refund>Refund Policy</refund>. Payments are processed by Paddle.com as Merchant of Record."
     }
   },
   "faq": {
@@ -468,9 +475,10 @@
       "downloadWindows": "Download for Windows",
       "downloadMac": "Mac (coming soon)",
       "releaseNotes": "Release notes",
-      "privacy": "Privacy",
-      "terms": "Terms",
-      "contact": "Contact"
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact",
+      "refund": "Refund Policy"
     },
     "rights": "All rights reserved.",
     "madeFor": "Made for modern work."
@@ -683,17 +691,215 @@
     "privacy": {
       "eyebrow": "Legal",
       "title": "Privacy Policy",
-      "paragraphs": [
-        "This is placeholder legal content for the Colega privacy policy. In a production build, this page would describe in detail what data Colega collects, how it is stored, and how you can control it.",
-        "Colega only sees what you explicitly share with it — like your screen, when you turn that on — and you can revoke access or delete your data at any time from your account settings."
+      "intro": [
+        "This policy explains which personal data we process when you use Colega, why and how we process it, and your rights. It also serves as our privacy notice under Turkish Law No. 6698 on the Protection of Personal Data (\"KVKK\")."
+      ],
+      "sections": [
+        {
+          "heading": "1. Data controller",
+          "paragraphs": [
+            "The data controller under KVKK is Arda Serdar Malkaş (Colega). Contact: support@colegapro.com · Kocaeli, Türkiye.",
+            "Payments are processed by Paddle.com as Merchant of Record; for your payment and billing data Paddle is a separate controller under its own privacy policy."
+          ]
+        },
+        {
+          "heading": "2. Data we process",
+          "items": [
+            "Account data: name, email address, username, optional profile photo and job title. If you sign in with Google, the name and email address Google shares with us.",
+            "Company (Teams) data: company name and logo, members and their roles, invitations, documents and workflows company admins teach Colega, company rules and shared workspace content.",
+            "App content: tasks and notes you create, your personal rules and (unless you turn it off in settings) a text history of the insights Colega shows you.",
+            "Screenshots and audio: only as described in section 3 below, when you start them.",
+            "Usage and security records: quota and usage counters, rate-limit records, error codes and timings.",
+            "Payment and subscription data: your plan, subscription status, billing period dates and Paddle customer/subscription IDs. Your card details never reach us.",
+            "Technical data: records such as IP address and browser/device information kept by our hosting and infrastructure providers to run and secure the Service."
+          ]
+        },
+        {
+          "heading": "3. Screenshots and audio",
+          "items": [
+            "Screen checks (Check Screen / Ask Colega): Colega captures your screen only when you start a check or ask a question. The image is sent through our servers to OpenAI for AI processing and is not stored by us after the answer is produced. There is no continuous or background screen monitoring.",
+            "Hear Mode (meeting listening): when you start Hear Mode, Colega listens to the audio your computer plays and, optionally, your microphone. Audio is sent in short chunks through our servers to OpenAI for transcription; audio and meeting transcripts are not stored on our servers and are kept only in your device's memory during the session. You are responsible for respecting meeting participants' legal rights regarding being listened to.",
+            "Voice typing: when you use the microphone button, your voice is sent to OpenAI for transcription in the same way and is not stored.",
+            "Insights Colega generates (title, summary and suggestion text — not images) are saved to your account. You can turn this off in settings and delete your history.",
+            "Under its own policy, OpenAI does not use data sent through its API to train its models by default, and may retain it for a limited period to monitor for abuse."
+          ]
+        },
+        {
+          "heading": "4. Why we process your data",
+          "items": [
+            "to create your account, authenticate you and provide the Service;",
+            "to run the AI features you request (screen checks, meeting assistant, voice typing, teaching Colega company knowledge);",
+            "to manage your subscription, trial and plan entitlements;",
+            "to enforce usage limits, prevent abuse and security threats, and fix errors;",
+            "to answer your support requests and send essential service notices;",
+            "to comply with our legal obligations."
+          ]
+        },
+        {
+          "heading": "5. Legal bases",
+          "paragraphs": [
+            "We process your personal data under KVKK Article 5(2) where it is necessary to conclude or perform a contract with you (c), to comply with our legal obligations (ç), to establish, exercise or defend a right (e), and for our legitimate interests provided they do not harm your fundamental rights and freedoms (f). Where none of these applies, we ask for your explicit consent. If you are in the EU/UK, the equivalent GDPR bases apply (contract, legal obligation, legitimate interests and consent)."
+          ]
+        },
+        {
+          "heading": "6. Service providers and international transfers",
+          "paragraphs": [
+            "We share your data with the following providers only as needed to provide the Service:"
+          ],
+          "items": [
+            "Supabase — database, authentication, file storage and server functions (servers in the European Union, Frankfurt, Germany);",
+            "OpenAI — AI processing of screenshots, audio and text (United States);",
+            "Paddle — payments, invoicing and tax (Merchant of Record);",
+            "Netlify — website hosting;",
+            "Google — authentication, only if you choose to sign in with Google."
+          ]
+        },
+        {
+          "heading": "7. Retention",
+          "items": [
+            "Account and app data is kept while your account is open and deleted or anonymised within a reasonable period after you delete your account.",
+            "Screenshots, audio recordings and meeting transcripts are not stored on our servers.",
+            "Some data (e.g. local notes, app preferences and diagnostic logs) is kept only on your own device; you can delete it by uninstalling the app.",
+            "Payment and invoice records are retained by Paddle in line with statutory retention obligations."
+          ]
+        },
+        {
+          "heading": "8. Cookies",
+          "paragraphs": [
+            "Our website uses only cookies that are strictly necessary for it to work: authentication cookies that keep you signed in and a cookie that remembers your language preference. We do not use analytics, advertising or tracking cookies. The checkout is provided by Paddle, which may use its own cookies for payment security."
+          ]
+        },
+        {
+          "heading": "9. Security",
+          "paragraphs": [
+            "We protect your data with technical and organisational measures such as encrypted connections (HTTPS), row-level access rules and keys kept only on the server side. No system is completely risk-free; in the event of a data breach we will inform you and the relevant authorities as required by law."
+          ]
+        },
+        {
+          "heading": "10. Your rights",
+          "paragraphs": [
+            "Under KVKK Article 11 you have the right to learn whether your personal data is processed and to request information about it, to learn the purpose of processing and whether it is used accordingly, to know the third parties in Türkiye or abroad to whom it is transferred, to request correction of incomplete or inaccurate data and deletion or destruction under the conditions of KVKK, to request that these actions be notified to third parties to whom the data was transferred, to object to an outcome against you arising solely from automated analysis, and to claim compensation for damage caused by unlawful processing. If you are in the EU/UK, you also have the rights of access, rectification, erasure, restriction, portability and objection under the GDPR.",
+            "Send your request from the email address registered to your account to support@colegapro.com. We will respond free of charge within 30 days at the latest. If you are not satisfied with our response, you can complain to the Turkish Personal Data Protection Board or, in the EU/UK, to your local data protection authority."
+          ]
+        },
+        {
+          "heading": "11. Age limit",
+          "paragraphs": [
+            "The Service is not intended for anyone under 18 and we do not knowingly process their data."
+          ]
+        },
+        {
+          "heading": "12. Changes",
+          "paragraphs": [
+            "We may update this policy. We will announce material changes by email or in-app notice before they take effect."
+          ]
+        }
       ]
     },
     "terms": {
       "eyebrow": "Legal",
       "title": "Terms of Service",
-      "paragraphs": [
-        "This is placeholder legal content for the Colega terms of service. In a production build, this page would describe the rules and responsibilities that apply when using Colega on your desktop.",
-        "By using Colega, you agree to use the product responsibly and in accordance with applicable laws and these terms."
+      "intro": [
+        "Colega is operated by Arda Serdar Malkaş. These Terms of Service (\"Terms\") govern your use of the Colega desktop app, the colegapro.com website and all services provided through them (together, the \"Service\"), and form an agreement between you and Arda Serdar Malkaş. In these Terms, \"Colega\", \"we\", \"us\" and \"our\" refer to the provider of the Service.",
+        "By creating an account, using the Service or purchasing a plan, you agree to these Terms. If you do not agree, do not use the Service."
+      ],
+      "sections": [
+        {
+          "heading": "1. The Service",
+          "paragraphs": [
+            "Colega is an AI assistant that runs on your desktop. When you ask it to, it can check your screen, answer your questions, listen to meeting audio to provide summaries and suggestions, and help you organise your notes and tasks. On the Teams plan these features can be used together with your teammates in a shared company workspace.",
+            "We may improve, change or remove features of the Service. We will not materially reduce the core features of a paid plan to your detriment during your current subscription period."
+          ]
+        },
+        {
+          "heading": "2. Your account",
+          "items": [
+            "You must be at least 18 years old to use the Service.",
+            "You are responsible for keeping your account information accurate and your account secure. If you notice unauthorised use of your account, tell us immediately at support@colegapro.com.",
+            "If you create a company (Teams) workspace, you are responsible for ensuring that the people you invite use the Service in line with these Terms."
+          ]
+        },
+        {
+          "heading": "3. Plans, free trial and payment",
+          "paragraphs": [
+            "Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle handles payment, invoicing, tax collection and the processing of refunds, and your purchase is also subject to Paddle's buyer terms. Your card details are never shared with us; they are processed only by Paddle."
+          ],
+          "items": [
+            "The Free plan is provided at no cost with usage limits. Pro and Teams are paid subscriptions; current prices and features are shown on our Pricing page. Prices are in US dollars and include applicable taxes where relevant.",
+            "The Pro plan starts with a 7-day free trial. A valid payment method is required for the trial. Unless you cancel before the trial ends, the price of your selected billing period is charged automatically when the trial ends.",
+            "The Teams plan includes 3 seats; each additional person is charged as an additional seat.",
+            "Subscriptions renew automatically at the end of each billing period (monthly or yearly) until cancelled, and the price for that period is charged to your saved payment method.",
+            "We may change our prices. If a price change applies to your existing subscription, we will notify you a reasonable time before the renewal at which the new price applies; if you do not accept the change, you can cancel before that renewal."
+          ]
+        },
+        {
+          "heading": "4. Cancellation",
+          "paragraphs": [
+            "You can cancel your subscription at any time from your Account page. Cancellation takes effect at the end of your current billing period (or trial); you keep access to paid features until then and will not be charged again. You can undo the cancellation before the period ends.",
+            "Refunds are governed by our Refund Policy. Outside of the Refund Policy, we do not provide partial refunds for unused time."
+          ]
+        },
+        {
+          "heading": "5. Acceptable use",
+          "paragraphs": [
+            "When using the Service, you agree not to:"
+          ],
+          "items": [
+            "use it for unlawful, infringing, harmful or deceptive purposes;",
+            "submit other people's personal data to the Service without the right to share it, or have the Service listen to meetings in breach of participants' legal rights regarding recording and listening;",
+            "attempt to bypass the Service's security measures, usage limits or plan restrictions, reverse engineer the Service, or overload or disrupt it by automated means;",
+            "transfer or sell your account, or share it with more people than your plan allows."
+          ]
+        },
+        {
+          "heading": "6. AI output",
+          "paragraphs": [
+            "Colega's answers, suggestions and summaries are generated by AI models and may be inaccurate, incomplete or out of date. Do not rely on them alone for important decisions (legal, financial, medical, etc.) and consult a professional where appropriate. You are responsible for how you use the output."
+          ]
+        },
+        {
+          "heading": "7. Your content and intellectual property",
+          "paragraphs": [
+            "Content you upload to or create through the Service (notes, tasks, documents, etc.) belongs to you. You grant us the right to process that content only as needed to provide, maintain and improve the Service for you. How we process it is described in our Privacy Policy.",
+            "All rights in the Colega software, brand, logo and website belong to us. These Terms give you a non-transferable, non-exclusive right to use the Service for your personal or internal business purposes."
+          ]
+        },
+        {
+          "heading": "8. Third-party services",
+          "paragraphs": [
+            "The Service relies on third-party providers for hosting, database, AI processing and payments. These providers are listed in our Privacy Policy. We are not responsible for outages of third-party services that are beyond our reasonable control."
+          ]
+        },
+        {
+          "heading": "9. Suspension and termination",
+          "paragraphs": [
+            "You can close your account at any time. We may suspend or close your account if you seriously or repeatedly breach these Terms, misuse the Service, or where required by law; where reasonable, we will give you notice first. If we end your paid subscription without a valid reason, we will refund the unused portion."
+          ]
+        },
+        {
+          "heading": "10. Limitation of liability",
+          "paragraphs": [
+            "We work hard to provide the Service with care, but it is provided \"as is\" and we do not guarantee that it will be uninterrupted or error-free. To the extent permitted by law, we are not liable for indirect damages or loss of profits, and our total liability arising from the Service is limited to the amount you paid for the Service in the 12 months before the event giving rise to the claim. These limitations do not apply to wilful misconduct or gross negligence and do not affect statutory rights you have as a consumer that cannot be limited by contract."
+          ]
+        },
+        {
+          "heading": "11. Governing law and disputes",
+          "paragraphs": [
+            "These Terms are governed by the laws of the Republic of Türkiye. The courts and enforcement offices of Kocaeli have jurisdiction over disputes. If you are a consumer, your right to apply to consumer arbitration committees and consumer courts within the statutory limits, and any mandatory consumer protections of your country of residence, remain unaffected."
+          ]
+        },
+        {
+          "heading": "12. Changes",
+          "paragraphs": [
+            "We may update these Terms from time to time. We will announce material changes by email or in-app notice before they take effect. Continuing to use the Service after a change means you accept the updated Terms."
+          ]
+        },
+        {
+          "heading": "13. Contact",
+          "paragraphs": [
+            "For questions and support: support@colegapro.com · Kocaeli, Türkiye"
+          ]
+        }
       ]
     },
     "contact": {
@@ -701,6 +907,51 @@
       "title": "Get in touch",
       "paragraph": "Have a question about Colega, need help with your account, or want to talk about bringing Colega to your team? We'd love to hear from you.",
       "email": "support@colegapro.com"
+    },
+    "lastUpdated": "Last updated: {date}",
+    "updatedOn": "September 25, 2026",
+    "refund": {
+      "eyebrow": "Legal",
+      "title": "Refund Policy",
+      "intro": [
+        "We want you to be able to try Colega without risk. Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders and processes refunds."
+      ],
+      "sections": [
+        {
+          "heading": "1. 14-day no-questions-asked refund",
+          "items": [
+            "For the first payment of a new subscription, you can request a full refund within 14 days of the payment date, without giving a reason.",
+            "This includes the first payment taken at the end of the Pro free trial: you can get a full refund within 14 days of that first payment.",
+            "The same rule applies to monthly and yearly plans."
+          ]
+        },
+        {
+          "heading": "2. Renewal payments",
+          "paragraphs": [
+            "Later automatic renewal payments are not refundable. You can stop future payments at any time before a renewal by cancelling your subscription from your Account page; cancellation takes effect at the end of the period and you keep access until then.",
+            "If you believe a renewal payment was charged in error or twice, write to us and we will look into it and put it right."
+          ]
+        },
+        {
+          "heading": "3. How to request a refund",
+          "items": [
+            "Email support@colegapro.com from the email address registered to your account and, if possible, include your order number (shown on the receipt Paddle sends you).",
+            "You can also contact Paddle directly using the link in your receipt or via paddle.net."
+          ]
+        },
+        {
+          "heading": "4. Refund process",
+          "paragraphs": [
+            "Approved refunds are returned by Paddle to your original payment method. How long it takes to appear depends on your bank, usually 5–10 business days. After a refund the related subscription is cancelled and access to paid features ends."
+          ]
+        },
+        {
+          "heading": "5. Your statutory rights",
+          "paragraphs": [
+            "This policy does not limit any statutory rights you have under consumer protection law."
+          ]
+        }
+      ]
     }
   }
 }

@@ -1,5 +1,4 @@
-import { getTranslations } from "next-intl/server";
-import { SimplePage } from "@/components/layout/SimplePage";
+import { LegalPage } from "@/components/layout/LegalPage";
 import { buildMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -17,14 +16,5 @@ export default async function PrivacyPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "legal.privacy" });
-  const paragraphs = t.raw("paragraphs") as string[];
-
-  return (
-    <SimplePage eyebrow={t("eyebrow")} title={t("title")}>
-      {paragraphs.map((paragraph) => (
-        <p key={paragraph}>{paragraph}</p>
-      ))}
-    </SimplePage>
-  );
+  return <LegalPage locale={locale} doc="privacy" />;
 }

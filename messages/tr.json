@@ -43,6 +43,10 @@
     "account": {
       "title": "Hesap — Colega",
       "description": "Colega hesabını yönet."
+    },
+    "refund": {
+      "title": "İade Politikası — Colega",
+      "description": "Colega aboneliklerinde 14 gün koşulsuz iade ve iade süreci."
     }
   },
   "nav": {
@@ -415,6 +419,9 @@
         "invalid_request": "Bu seçimde bir sorun var. Sayfayı yenileyip tekrar deneyin.",
         "unavailable": "Ödeme şu anda kullanılamıyor. Lütfen biraz sonra tekrar deneyin."
       }
+    },
+    "legalNote": {
+      "text": "Devam ederek <terms>Kullanım Şartları</terms> ve <refund>İade Politikası</refund> şartlarını kabul etmiş olursunuz. Ödemeler, satıcı (Merchant of Record) olarak Paddle.com tarafından işlenir."
     }
   },
   "faq": {
@@ -468,9 +475,10 @@
       "downloadWindows": "Windows için indir",
       "downloadMac": "Mac (yakında)",
       "releaseNotes": "Sürüm notları",
-      "privacy": "Gizlilik",
-      "terms": "Koşullar",
-      "contact": "İletişim"
+      "privacy": "Gizlilik Politikası",
+      "terms": "Kullanım Şartları",
+      "contact": "İletişim",
+      "refund": "İade Politikası"
     },
     "rights": "Tüm hakları saklıdır.",
     "madeFor": "Modern iş için tasarlandı."
@@ -682,18 +690,216 @@
   "legal": {
     "privacy": {
       "eyebrow": "Yasal",
-      "title": "Gizlilik Politikası",
-      "paragraphs": [
-        "Bu, Colega gizlilik politikası için yer tutucu bir içeriktir. Gerçek bir sürümde bu sayfa, Colega'nın hangi verileri topladığını, nasıl sakladığını ve bunları nasıl kontrol edebileceğini ayrıntılı olarak açıklar.",
-        "Colega yalnızca açıkça paylaştığın şeyi görür — örneğin ekranını, onu açtığında — ve erişimi istediğin an hesap ayarlarından iptal edebilir ya da verilerini silebilirsin."
+      "title": "Gizlilik Politikası ve KVKK Aydınlatma Metni",
+      "intro": [
+        "Bu politika, Colega'yı kullanırken hangi kişisel verilerinizi işlediğimizi, bunları neden ve nasıl işlediğimizi ve haklarınızı açıklar. Aynı zamanda 6698 sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\") kapsamındaki aydınlatma metnimizdir."
+      ],
+      "sections": [
+        {
+          "heading": "1. Veri sorumlusu",
+          "paragraphs": [
+            "KVKK kapsamında veri sorumlusu Arda Serdar Malkaş'tır (Colega). İletişim: support@colegapro.com · Kocaeli, Türkiye.",
+            "Ödemeler, satıcı (Merchant of Record) olarak Paddle.com tarafından işlenir; ödeme ve fatura bilgileriniz bakımından Paddle kendi gizlilik politikasına tabi olarak ayrıca veri sorumlusudur."
+          ]
+        },
+        {
+          "heading": "2. İşlediğimiz veriler",
+          "items": [
+            "Hesap bilgileri: ad soyad, e-posta adresi, kullanıcı adı, isteğe bağlı profil fotoğrafı ve iş unvanı. Google ile giriş yaparsanız Google'ın bize ilettiği ad ve e-posta bilgisi.",
+            "Şirket (Teams) bilgileri: şirket adı ve logosu, üyeler ve rolleri, davetler, şirket yöneticilerinin Colega'ya öğrettiği belgeler ve iş akışları, şirket kuralları ve paylaşılan çalışma alanı içerikleri.",
+            "Uygulama içeriği: oluşturduğunuz görevler ve notlar, kişisel kurallarınız ve (ayarlarda kapatmadığınız sürece) Colega'nın size gösterdiği içgörülerin metin olarak geçmişi.",
+            "Ekran görüntüleri ve ses: yalnızca aşağıdaki 3. bölümde açıklanan şekilde, siz başlattığınızda.",
+            "Kullanım ve güvenlik kayıtları: kota ve kullanım sayaçları, istek sınırlama kayıtları, hata kodları ve işlem zamanları.",
+            "Ödeme ve abonelik bilgileri: planınız, abonelik durumu, dönem tarihleri ve Paddle müşteri/abonelik kimlikleri. Kart bilgileriniz bize ulaşmaz.",
+            "Teknik veriler: IP adresi ve tarayıcı/cihaz bilgileri gibi, barındırma ve altyapı sağlayıcılarımızın hizmetin işleyişi ve güvenliği için tuttuğu kayıtlar."
+          ]
+        },
+        {
+          "heading": "3. Ekran görüntüleri ve ses",
+          "items": [
+            "Ekran kontrolü (Check Screen / Ask Colega): Colega ekranınızın görüntüsünü yalnızca siz bir kontrol başlattığınızda ya da bir soru sorduğunuzda alır. Görüntü, sunucularımız üzerinden yapay zekâ işlemesi için OpenAI'a gönderilir ve yanıt üretildikten sonra tarafımızca saklanmaz. Sürekli ya da arka planda ekran izleme yapılmaz.",
+            "Hear Mode (toplantı dinleme): Hear Mode'u siz başlattığınızda Colega bilgisayarınızın çaldığı sesi ve isteğe bağlı olarak mikrofonunuzu dinler. Ses kısa parçalar halinde yazıya dökülmek üzere sunucularımız üzerinden OpenAI'a gönderilir; ses kayıtları ve toplantı metni sunucularımızda saklanmaz, oturum boyunca yalnızca cihazınızın belleğinde tutulur. Toplantı katılımcılarının dinlenmeye ilişkin yasal haklarına uymak sizin sorumluluğunuzdadır.",
+            "Sesle yazma: mikrofon düğmesini kullandığınızda sesiniz yazıya dökülmek üzere aynı şekilde OpenAI'a gönderilir ve saklanmaz.",
+            "Colega'nın ürettiği içgörüler (başlık, özet ve öneri metni; görüntü değil) hesabınıza kaydedilir. Bu kaydı ayarlardan kapatabilir ve geçmişinizi silebilirsiniz.",
+            "OpenAI, API üzerinden gönderilen verileri kendi politikası gereği varsayılan olarak modellerini eğitmek için kullanmaz; kötüye kullanımı izlemek amacıyla sınırlı bir süre saklayabilir."
+          ]
+        },
+        {
+          "heading": "4. İşleme amaçları",
+          "items": [
+            "Hesabınızı oluşturmak, kimliğinizi doğrulamak ve Hizmet'i sunmak;",
+            "İstediğiniz yapay zekâ özelliklerini (ekran kontrolü, toplantı asistanı, sesle yazma, şirket bilgisinin öğretilmesi) çalıştırmak;",
+            "Aboneliğinizi, deneme sürenizi ve planınıza bağlı hakları yönetmek;",
+            "Kullanım sınırlarını uygulamak, kötüye kullanımı ve güvenlik tehditlerini önlemek, hataları gidermek;",
+            "Destek taleplerinize yanıt vermek ve hizmetle ilgili zorunlu bildirimleri göndermek;",
+            "Yasal yükümlülüklerimizi yerine getirmek."
+          ]
+        },
+        {
+          "heading": "5. Hukuki sebepler",
+          "paragraphs": [
+            "Kişisel verilerinizi KVKK madde 5/2 kapsamında; bir sözleşmenin kurulması veya ifası için gerekli olması (c), hukuki yükümlülüklerimizi yerine getirmemiz (ç), bir hakkın tesisi, kullanılması veya korunması (e) ve temel hak ve özgürlüklerinize zarar vermemek kaydıyla meşru menfaatlerimiz (f) hukuki sebeplerine dayanarak işleriz. Bu sebeplerin bulunmadığı hallerde açık rızanıza başvururuz."
+          ]
+        },
+        {
+          "heading": "6. Hizmet sağlayıcılar ve yurt dışına aktarım",
+          "paragraphs": [
+            "Verilerinizi yalnızca Hizmet'i sunmak için gereken ölçüde aşağıdaki hizmet sağlayıcılarla paylaşırız:"
+          ],
+          "items": [
+            "Supabase — veritabanı, kimlik doğrulama, dosya depolama ve sunucu fonksiyonları (sunucular Avrupa Birliği'nde, Frankfurt/Almanya);",
+            "OpenAI — ekran görüntüsü, ses ve metinlerin yapay zekâ ile işlenmesi (ABD);",
+            "Paddle — ödeme, faturalama ve vergi (satıcı / Merchant of Record);",
+            "Netlify — web sitesinin barındırılması;",
+            "Google — yalnızca Google ile giriş yapmayı seçerseniz kimlik doğrulama."
+          ]
+        },
+        {
+          "heading": "7. Saklama süreleri",
+          "items": [
+            "Hesap ve uygulama verileri, hesabınız açık kaldığı sürece saklanır; hesabınızı sildiğinizde makul bir süre içinde silinir veya anonim hale getirilir.",
+            "Ekran görüntüleri, ses kayıtları ve toplantı metinleri sunucularımızda saklanmaz.",
+            "Bazı veriler (ör. yerel notlar, uygulama tercihleri ve tanılama kayıtları) yalnızca kendi cihazınızda tutulur; bunları uygulamayı kaldırarak silebilirsiniz.",
+            "Ödeme ve fatura kayıtları, yasal saklama yükümlülükleri çerçevesinde Paddle tarafından saklanır."
+          ]
+        },
+        {
+          "heading": "8. Çerezler",
+          "paragraphs": [
+            "Web sitemizde yalnızca hizmetin çalışması için zorunlu çerezler kullanılır: oturumunuzu açık tutan kimlik doğrulama çerezleri ve dil tercihinizi hatırlayan çerez. Analitik, reklam ya da izleme çerezi kullanmıyoruz. Ödeme ekranı Paddle tarafından sunulur ve Paddle, ödeme güvenliği için kendi çerezlerini kullanabilir."
+          ]
+        },
+        {
+          "heading": "9. Güvenlik",
+          "paragraphs": [
+            "Verilerinizi korumak için şifreli bağlantılar (HTTPS), satır düzeyinde erişim kuralları ve yalnızca sunucu tarafında tutulan anahtarlar gibi teknik ve idari önlemler uygularız. Hiçbir sistem tamamen risksiz değildir; bir veri ihlali durumunda yasal yükümlülüklerimiz doğrultusunda sizi ve ilgili makamları bilgilendiririz."
+          ]
+        },
+        {
+          "heading": "10. Haklarınız",
+          "paragraphs": [
+            "KVKK madde 11 kapsamında; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işleme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme, yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini, KVKK'daki şartlar çerçevesinde silinmesini veya yok edilmesini isteme, bu işlemlerin aktarılan üçüncü kişilere bildirilmesini isteme, münhasıran otomatik sistemlerle analiz edilmesi sonucu aleyhinize bir sonucun ortaya çıkmasına itiraz etme ve kanuna aykırı işleme nedeniyle zarara uğramanız halinde zararın giderilmesini talep etme haklarına sahipsiniz.",
+            "Başvurularınızı hesabınıza kayıtlı e-posta adresinden support@colegapro.com adresine iletebilirsiniz. Başvurunuzu en geç 30 gün içinde ücretsiz olarak sonuçlandırırız. Yanıtımızdan memnun kalmazsanız Kişisel Verileri Koruma Kurulu'na şikâyette bulunabilirsiniz."
+          ]
+        },
+        {
+          "heading": "11. Yaş sınırı",
+          "paragraphs": [
+            "Hizmet 18 yaş altındaki kişilere yönelik değildir ve bu kişilerin verilerini bilerek işlemeyiz."
+          ]
+        },
+        {
+          "heading": "12. Değişiklikler",
+          "paragraphs": [
+            "Bu politikayı güncelleyebiliriz. Önemli değişiklikleri yürürlüğe girmeden önce e-posta ya da Hizmet içi bildirimle duyururuz."
+          ]
+        }
       ]
     },
     "terms": {
       "eyebrow": "Yasal",
-      "title": "Kullanım Koşulları",
-      "paragraphs": [
-        "Bu, Colega kullanım koşulları için yer tutucu bir içeriktir. Gerçek bir sürümde bu sayfa, Colega'yı masaüstünde kullanırken geçerli olan kuralları ve sorumlulukları açıklar.",
-        "Colega'yı kullanarak ürünü sorumlu bir şekilde ve geçerli yasalarla bu koşullara uygun olarak kullanmayı kabul edersin."
+      "title": "Kullanım Şartları",
+      "intro": [
+        "Colega, Arda Serdar Malkaş tarafından işletilmektedir. Bu Kullanım Şartları (\"Şartlar\"), Colega masaüstü uygulamasını, colegapro.com web sitesini ve bunlarla sunulan tüm hizmetleri (birlikte \"Hizmet\") kullanımınızı düzenler ve sizinle Arda Serdar Malkaş arasında bir sözleşme oluşturur. Bu metinde \"Colega\", \"biz\" ve \"bizim\" ifadeleri Hizmet'i sunan tarafı ifade eder.",
+        "Bir hesap oluşturarak, Hizmet'i kullanarak ya da bir plan satın alarak bu Şartları kabul etmiş olursunuz. Kabul etmiyorsanız Hizmet'i kullanmayın."
+      ],
+      "sections": [
+        {
+          "heading": "1. Hizmet",
+          "paragraphs": [
+            "Colega, masaüstünüzde çalışan bir yapay zekâ asistanıdır. İstediğinizde ekranınızı kontrol edebilir, sorularınızı yanıtlayabilir, toplantı sesini dinleyerek özet ve öneriler sunabilir, notlarınızı ve görevlerinizi düzenlemenize yardımcı olabilir. Teams planında bu özellikler bir şirket çalışma alanı içinde ekip arkadaşlarınızla birlikte kullanılabilir.",
+            "Hizmet'in özelliklerini geliştirebilir, değiştirebilir ya da kaldırabiliriz. Ücretli bir planın temel özelliklerini abonelik döneminiz içinde aleyhinize olacak şekilde önemli ölçüde azaltmayız."
+          ]
+        },
+        {
+          "heading": "2. Hesabınız",
+          "items": [
+            "Hizmet'i kullanmak için en az 18 yaşında olmanız gerekir.",
+            "Hesap bilgilerinizin doğru olmasından ve hesabınızın güvenliğinden siz sorumlusunuz. Hesabınızda yetkisiz bir kullanım fark ederseniz bize hemen support@colegapro.com adresinden bildirin.",
+            "Bir şirket (Teams) çalışma alanı oluşturuyorsanız, o çalışma alanına davet ettiğiniz kişilerin Hizmet'i bu Şartlara uygun kullanmasını sağlamakla yükümlüsünüz."
+          ]
+        },
+        {
+          "heading": "3. Planlar, deneme süresi ve ödeme",
+          "paragraphs": [
+            "Sipariş sürecimiz çevrimiçi satıcımız Paddle.com tarafından yürütülür. Paddle.com, tüm siparişlerimizin satıcısıdır (Merchant of Record). Ödeme, faturalama, vergi tahsilatı ve iadelerin işlenmesi Paddle tarafından yapılır; satın alma işleminiz ayrıca Paddle'ın alıcı koşullarına tabidir. Kart bilgileriniz bize iletilmez, yalnızca Paddle tarafından işlenir."
+          ],
+          "items": [
+            "Ücretsiz plan, belirli kullanım sınırlarıyla ücretsiz sunulur. Pro ve Teams planları ücretli aboneliklerdir; güncel fiyatlar ve özellikler Fiyatlandırma sayfasında yer alır. Fiyatlar ABD doları cinsindendir ve geçerli olduğu durumlarda vergiler dahildir.",
+            "Pro planı 7 günlük ücretsiz deneme süresiyle başlar. Deneme için geçerli bir ödeme yöntemi gerekir. Deneme bitmeden iptal etmezseniz, deneme sonunda seçtiğiniz dönemin ücreti otomatik olarak tahsil edilir.",
+            "Teams planı 3 kişi içerir; her ek kişi için ek koltuk ücreti uygulanır.",
+            "Abonelikler, iptal edilene kadar seçtiğiniz dönem (aylık veya yıllık) sonunda otomatik olarak yenilenir ve o dönemin ücreti kayıtlı ödeme yönteminizden tahsil edilir.",
+            "Fiyatları değiştirebiliriz. Mevcut aboneliğiniz için geçerli bir fiyat değişikliğini, yeni fiyatın uygulanacağı yenilemeden makul bir süre önce size bildiririz; değişikliği kabul etmiyorsanız aboneliğinizi o yenilemeden önce iptal edebilirsiniz."
+          ]
+        },
+        {
+          "heading": "4. İptal",
+          "paragraphs": [
+            "Aboneliğinizi istediğiniz zaman Hesap sayfasından iptal edebilirsiniz. İptal, içinde bulunduğunuz ödeme döneminin (ya da deneme süresinin) sonunda geçerli olur; o tarihe kadar ücretli özelliklere erişiminiz devam eder ve sonrasında tekrar ücretlendirilmezsiniz. Dönem bitmeden iptali geri alabilirsiniz.",
+            "İadeler İade Politikamıza tabidir. İade Politikası kapsamı dışında, kullanılmayan süreler için kısmi iade yapılmaz."
+          ]
+        },
+        {
+          "heading": "5. Kabul edilebilir kullanım",
+          "paragraphs": [
+            "Hizmet'i kullanırken aşağıdakileri yapmamayı kabul edersiniz:"
+          ],
+          "items": [
+            "Yasalara aykırı, başkalarının haklarını ihlal eden, zararlı ya da yanıltıcı amaçlarla kullanmak;",
+            "Başkalarının kişisel verilerini, bu verileri paylaşma hakkınız olmadan Hizmet'e iletmek; toplantıları, katılımcıların kayda ve dinlemeye ilişkin yasal haklarına aykırı biçimde dinletmek;",
+            "Hizmet'in güvenlik önlemlerini, kullanım sınırlarını ya da plan kısıtlamalarını aşmaya çalışmak; Hizmet'i tersine mühendislikle çözmeye, otomatik yollarla aşırı yüklemeye veya kesintiye uğratmaya çalışmak;",
+            "Hesabınızı başkalarına devretmek, satmak ya da planınızın izin verdiğinden fazla kişiyle paylaşmak."
+          ]
+        },
+        {
+          "heading": "6. Yapay zekâ çıktıları",
+          "paragraphs": [
+            "Colega'nın yanıtları, önerileri ve özetleri yapay zekâ modelleri tarafından üretilir ve hatalı, eksik ya da güncel olmayan bilgiler içerebilir. Önemli kararlarda (hukuki, mali, tıbbi vb.) bu çıktılara tek başına güvenmeyin ve gerektiğinde bir uzmana danışın. Çıktıları nasıl kullandığınızın sorumluluğu size aittir."
+          ]
+        },
+        {
+          "heading": "7. İçeriğiniz ve fikri mülkiyet",
+          "paragraphs": [
+            "Hizmet'e yüklediğiniz ya da Hizmet aracılığıyla oluşturduğunuz içerik (notlar, görevler, belgeler vb.) size aittir. Bu içeriği yalnızca Hizmet'i size sunmak, sürdürmek ve iyileştirmek için gereken ölçüde işleme hakkını bize tanırsınız. İçeriğinizin nasıl işlendiği Gizlilik Politikamızda açıklanmıştır.",
+            "Colega yazılımı, markası, logosu ve web sitesi üzerindeki tüm haklar bize aittir. Bu Şartlar size, Hizmet'i kişisel ya da iç iş amaçlarınız için kullanmak üzere devredilemez ve münhasır olmayan bir kullanım hakkı verir."
+          ]
+        },
+        {
+          "heading": "8. Üçüncü taraf hizmetler",
+          "paragraphs": [
+            "Hizmet; barındırma, veritabanı, yapay zekâ işleme ve ödeme için üçüncü taraf hizmet sağlayıcıları kullanır. Bu sağlayıcılar Gizlilik Politikamızda listelenmiştir. Üçüncü taraf hizmetlerde yaşanan ve makul kontrolümüz dışındaki kesintilerden sorumlu değiliz."
+          ]
+        },
+        {
+          "heading": "9. Askıya alma ve fesih",
+          "paragraphs": [
+            "Hesabınızı istediğiniz zaman kapatabilirsiniz. Bu Şartları ciddi şekilde ya da tekrar tekrar ihlal etmeniz, Hizmet'i kötüye kullanmanız veya yasal bir zorunluluk halinde hesabınızı askıya alabilir ya da kapatabiliriz; makul olduğu durumlarda bunu önceden bildiririz. Haklı bir sebep olmaksızın ücretli aboneliğinizi sonlandırırsak, kullanılmayan dönemin ücretini iade ederiz."
+          ]
+        },
+        {
+          "heading": "10. Sorumluluğun sınırlandırılması",
+          "paragraphs": [
+            "Hizmet'i özenle sunmaya çalışırız, ancak Hizmet \"olduğu gibi\" sunulur ve kesintisiz ya da hatasız olacağını garanti etmeyiz. Yürürlükteki mevzuatın izin verdiği ölçüde, dolaylı zararlardan ve kâr kaybından sorumlu değiliz; Hizmet'ten doğan toplam sorumluluğumuz, talebe konu olaydan önceki 12 ay içinde Hizmet için ödediğiniz tutarla sınırlıdır. Bu sınırlamalar kast ve ağır ihmal hallerini ve tüketici olarak sahip olduğunuz, sözleşmeyle sınırlanamayan yasal hakları etkilemez."
+          ]
+        },
+        {
+          "heading": "11. Uygulanacak hukuk ve uyuşmazlıklar",
+          "paragraphs": [
+            "Bu Şartlar Türkiye Cumhuriyeti hukukuna tabidir. Uyuşmazlıklarda Kocaeli mahkemeleri ve icra daireleri yetkilidir. Tüketici iseniz, yasal sınırlar dahilinde Tüketici Hakem Heyetlerine ve tüketici mahkemelerine başvurma hakkınız ile yaşadığınız ülkenin emredici tüketici koruma kuralları saklıdır."
+          ]
+        },
+        {
+          "heading": "12. Değişiklikler",
+          "paragraphs": [
+            "Bu Şartları zaman zaman güncelleyebiliriz. Önemli değişiklikleri yürürlüğe girmeden önce e-posta ya da Hizmet içi bildirimle duyururuz. Değişiklikten sonra Hizmet'i kullanmaya devam etmeniz, güncel Şartları kabul ettiğiniz anlamına gelir."
+          ]
+        },
+        {
+          "heading": "13. İletişim",
+          "paragraphs": [
+            "Sorularınız ve destek talepleriniz için: support@colegapro.com · Kocaeli, Türkiye"
+          ]
+        }
       ]
     },
     "contact": {
@@ -701,6 +907,51 @@
       "title": "Bize ulaş",
       "paragraph": "Colega hakkında bir sorun mu var, hesabınla ilgili yardıma mı ihtiyacın var, ya da Colega'yı ekibine getirmek mi istiyorsun? Senden haber almak isteriz.",
       "email": "support@colegapro.com"
+    },
+    "lastUpdated": "Son güncelleme: {date}",
+    "updatedOn": "25 Eylül 2026",
+    "refund": {
+      "eyebrow": "Yasal",
+      "title": "İade Politikası",
+      "intro": [
+        "Colega'yı risksiz deneyebilmenizi istiyoruz. Sipariş sürecimiz çevrimiçi satıcımız Paddle.com tarafından yürütülür; Paddle.com tüm siparişlerimizin satıcısıdır (Merchant of Record) ve iadeleri Paddle işler."
+      ],
+      "sections": [
+        {
+          "heading": "1. 14 gün koşulsuz iade",
+          "items": [
+            "Yeni bir aboneliğin ilk ödemesi için, ödeme tarihinden itibaren 14 gün içinde herhangi bir gerekçe göstermeden tam iade talep edebilirsiniz.",
+            "Pro deneme süresinin sonunda alınan ilk ödeme de bu kapsamdadır: ilk ödeme tarihinden itibaren 14 gün içinde tam iade alabilirsiniz.",
+            "Aylık ve yıllık planlar için aynı kural geçerlidir."
+          ]
+        },
+        {
+          "heading": "2. Yenileme ödemeleri",
+          "paragraphs": [
+            "Aboneliğinizin sonraki otomatik yenileme ödemeleri iade kapsamında değildir. Yenilemeden önce istediğiniz zaman Hesap sayfasından aboneliğinizi iptal ederek sonraki ödemeleri durdurabilirsiniz; iptal dönem sonunda geçerli olur ve o tarihe kadar erişiminiz devam eder.",
+            "Yenileme ödemesinde hatalı ya da mükerrer bir tahsilat olduğunu düşünüyorsanız bize yazın; durumu inceleyip gerekli düzeltmeyi yaparız."
+          ]
+        },
+        {
+          "heading": "3. İade nasıl talep edilir",
+          "items": [
+            "support@colegapro.com adresine hesabınıza kayıtlı e-posta adresinden yazın ve mümkünse sipariş numaranızı (Paddle'ın gönderdiği makbuzda yer alır) ekleyin.",
+            "Dilerseniz makbuzunuzdaki bağlantıyı kullanarak veya paddle.net üzerinden doğrudan Paddle'a da başvurabilirsiniz."
+          ]
+        },
+        {
+          "heading": "4. İade süreci",
+          "paragraphs": [
+            "Onaylanan iadeler Paddle tarafından ödemeyi yaptığınız yönteme geri ödenir. Tutarın hesabınıza yansıma süresi bankanıza bağlıdır ve genellikle 5–10 iş günü sürer. İade sonrasında ilgili abonelik iptal edilir ve ücretli özelliklere erişiminiz sona erer."
+          ]
+        },
+        {
+          "heading": "5. Yasal haklarınız",
+          "paragraphs": [
+            "Bu politika, tüketici mevzuatı kapsamında sahip olduğunuz yasal hakları sınırlamaz."
+          ]
+        }
+      ]
     }
   }
 }

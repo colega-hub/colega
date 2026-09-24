@@ -24,11 +24,15 @@ export function Footer() {
               {t("tagline")}
             </p>
             <div className="flex items-center gap-3 pt-2">
-              {[Globe, MessageCircle, Mail].map((Icon, i) => (
+              {[
+                { Icon: Globe, href: "#", label: "Social link" },
+                { Icon: MessageCircle, href: "#", label: "Social link" },
+                { Icon: Mail, href: "mailto:support@colegapro.com", label: "support@colegapro.com" },
+              ].map(({ Icon, href, label }, i) => (
                 <a
                   key={i}
-                  href="#"
-                  aria-label="Social link"
+                  href={href}
+                  aria-label={label}
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-border-strong hover:text-foreground"
                 >
                   <Icon size={16} />
