@@ -3,7 +3,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { TEAM_BASE_SEATS, TEAM_MAX_SEATS, TEAM_MIN_SEATS } from "@/lib/pricing";
 import { getPaddle, isPaddleConfigured } from "./server";
-import { PADDLE_PRICES, type BillingInterval, type PaidPlan } from "./prices";
+import { getPaddlePrices, type BillingInterval, type PaidPlan } from "./prices";
 
 export type CheckoutResult =
   | { status: "ok"; transactionId: string }
@@ -53,14 +53,13 @@ export async function createCheckoutTransaction(input: {
     return { status: "error", code: "already_subscribed" };
   }
 
-  const items: { priceId: string; quantity: number }[] = [
-    { priceId: PADDLE_PRICES[plan][interval], quantity: 1 },
-  ];
-  if (plan === "teams" && seats > TEAM_BASE_SEATS) {
-    items.push({ priceId: PADDLE_PRICES.additionalSeat[interval], quantity: seats - TEAM_BASE_SEATS });
-  }
-
   try {
+    const prices = getPaddlePrices();
+    const items: { priceId: string; quantity: number }[] = [{ priceId: prices[plan][interval], quantity: 1 }];
+    if (plan === "teams" && seats > TEAM_BASE_SEATS) {
+      items.push({ priceId: prices.additionalSeat[interval], quantity: seats - TEAM_BASE_SEATS });
+    }
+
     const paddle = getPaddle();
     const customerId = existing?.billing_customer_id ?? (await findOrCreateCustomer(user.email));
     const transaction = await paddle.transactions.create({

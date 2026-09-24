@@ -1,42 +1,49 @@
-// Paddle catalog (SANDBOX). Price IDs are environment-scoped: switching NEXT_PUBLIC_PADDLE_ENV to
-// "production" also requires replacing every ID below with the live catalog's IDs.
+import "server-only";
+
+// Paddle catalog price IDs, read from SERVER-ONLY env vars so switching sandbox <-> live is purely
+// an environment change (NEXT_PUBLIC_PADDLE_ENV + keys + these six IDs), never a code change.
+// The checkout action and the webhook both resolve prices through this one module, so a price is
+// always interpreted the same way on both sides.
 //
-// Safe to import from client code — IDs only, no secrets. The server-side checkout action and the
-// webhook both read this one table, so a price is always interpreted the same way on both sides.
+// Fallback: in SANDBOX only, a missing variable falls back to the sandbox catalog below. In
+// production a missing variable throws — a live deploy must never silently sell sandbox IDs.
 export type BillingInterval = "month" | "year";
 export type PaidPlan = "pro" | "teams";
 
-export const PADDLE_PRICES = {
-  pro: {
-    month: "pri_01m3amwjagvmpmx1d70dnhpqew",
-    year: "pri_01m3ar8jybfx2xyj1vgtg1tx72",
-  },
-  teams: {
-    month: "pri_01m3apascsrvemce6hnf4mwtab",
-    year: "pri_01m3ar8kj1fzper17cevk827vz",
-  },
-  additionalSeat: {
-    month: "pri_01m3apfgkh5c0e26ynmkg734wm",
-    year: "pri_01m3ar8ktsf6c5myjf4vr0cgck",
-  },
+const SANDBOX_DEFAULTS = {
+  PADDLE_PRICE_PRO_MONTH: "pri_01m3amwjagvmpmx1d70dnhpqew",
+  PADDLE_PRICE_PRO_YEAR: "pri_01m3ar8jybfx2xyj1vgtg1tx72",
+  PADDLE_PRICE_TEAMS_MONTH: "pri_01m3apascsrvemce6hnf4mwtab",
+  PADDLE_PRICE_TEAMS_YEAR: "pri_01m3ar8kj1fzper17cevk827vz",
+  PADDLE_PRICE_SEAT_MONTH: "pri_01m3apfgkh5c0e26ynmkg734wm",
+  PADDLE_PRICE_SEAT_YEAR: "pri_01m3ar8ktsf6c5myjf4vr0cgck",
 } as const;
 
-const PLAN_BY_PRICE_ID = new Map<string, PaidPlan>([
-  [PADDLE_PRICES.pro.month, "pro"],
-  [PADDLE_PRICES.pro.year, "pro"],
-  [PADDLE_PRICES.teams.month, "teams"],
-  [PADDLE_PRICES.teams.year, "teams"],
-]);
+type PriceVar = keyof typeof SANDBOX_DEFAULTS;
 
-const SEAT_PRICE_IDS = new Set<string>([
-  PADDLE_PRICES.additionalSeat.month,
-  PADDLE_PRICES.additionalSeat.year,
-]);
-
-export function planForPriceId(priceId: string): PaidPlan | null {
-  return PLAN_BY_PRICE_ID.get(priceId) ?? null;
+function priceId(name: PriceVar): string {
+  const value = process.env[name];
+  if (value) return value;
+  if (process.env.NEXT_PUBLIC_PADDLE_ENV !== "production") return SANDBOX_DEFAULTS[name];
+  throw new Error(`${name} is not configured for the production Paddle environment.`);
 }
 
-export function isSeatPriceId(priceId: string): boolean {
-  return SEAT_PRICE_IDS.has(priceId);
+export function getPaddlePrices() {
+  return {
+    pro: { month: priceId("PADDLE_PRICE_PRO_MONTH"), year: priceId("PADDLE_PRICE_PRO_YEAR") },
+    teams: { month: priceId("PADDLE_PRICE_TEAMS_MONTH"), year: priceId("PADDLE_PRICE_TEAMS_YEAR") },
+    additionalSeat: { month: priceId("PADDLE_PRICE_SEAT_MONTH"), year: priceId("PADDLE_PRICE_SEAT_YEAR") },
+  };
+}
+
+export function planForPriceId(id: string): PaidPlan | null {
+  const prices = getPaddlePrices();
+  if (id === prices.pro.month || id === prices.pro.year) return "pro";
+  if (id === prices.teams.month || id === prices.teams.year) return "teams";
+  return null;
+}
+
+export function isSeatPriceId(id: string): boolean {
+  const { additionalSeat } = getPaddlePrices();
+  return id === additionalSeat.month || id === additionalSeat.year;
 }
