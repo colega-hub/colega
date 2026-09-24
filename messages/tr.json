@@ -573,7 +573,52 @@
       "admin": "Yönetici",
       "member": "Üye"
     },
-    "logout": "Çıkış yap"
+    "logout": "Çıkış yap",
+    "billing": {
+      "planNames": {
+        "pro": "Colega Pro",
+        "teams": "Colega Teams"
+      },
+      "seats": "· {count} kişi",
+      "perMonth": "ay",
+      "perYear": "yıl",
+      "status": {
+        "active": "Aktif",
+        "trialing": "Deneme",
+        "past_due": "Ödeme gecikti",
+        "cancelled": "İptal edildi",
+        "cancelScheduled": "Dönem sonunda iptal"
+      },
+      "renews": "Aboneliğiniz {date} tarihinde yenilenecek.",
+      "trialEnds": "Deneme süreniz {date} tarihinde bitiyor, sonra {amount} ücretlendirileceksiniz.",
+      "trialEndsNoAmount": "Deneme süreniz {date} tarihinde bitiyor.",
+      "accessUntil": "Aboneliğiniz iptal edildi. Erişiminiz {date} tarihine kadar devam edecek.",
+      "cancelledDetail": "Aboneliğiniz sona erdi.",
+      "pastDueHint": "Son ödemeniz alınamadı. Lütfen ödeme yönteminizi güncelleyin.",
+      "portal": "Ödeme yöntemi / Faturalar",
+      "cancel": "Aboneliği iptal et",
+      "resume": "İptali geri al",
+      "resubscribe": "Plan seç",
+      "working": "Lütfen bekleyin…",
+      "confirmTitle": "Aboneliğiniz iptal edilsin mi?",
+      "confirmBody": "Tekrar ücretlendirilmeyeceksiniz. {date} tarihine kadar tüm özelliklere erişiminiz devam eder ve bu tarihten önce iptali istediğiniz zaman geri alabilirsiniz.",
+      "confirmKeep": "Aboneliği koru",
+      "confirmCancel": "Evet, iptal et",
+      "errors": {
+        "not_signed_in": "Oturumunuzun süresi doldu. Lütfen tekrar giriş yapın.",
+        "no_subscription": "Bu hesaba ait bir abonelik bulunamadı.",
+        "not_allowed": "Bu değişiklik aboneliğiniz için şu anda yapılamıyor. Sayfayı yenileyip tekrar deneyin.",
+        "unavailable": "Bir sorun oluştu. Lütfen biraz sonra tekrar deneyin ya da support@colegapro.com adresine yazın."
+      }
+    },
+    "checkoutSuccess": {
+      "title": "Ödemeniz başarıyla tamamlandı",
+      "planActive": "{plan} hesabınızda aktif.",
+      "preparing": "Hesabınız hazırlanıyor…",
+      "slow": "Bu işlem her zamankinden biraz uzun sürüyor. Planınız kısa süre içinde burada görünecek, sayfayı güvenle yenileyebilirsiniz.",
+      "openColega": "Colega’yı aç",
+      "openHint": "Colega masaüstü uygulamasını açın ve bu hesapla giriş yapın. Uygulama yüklü değilse bir sonraki sayfadan indirebilirsiniz."
+    }
   },
   "download": {
     "badge": "Beta erişimi",
@@ -655,7 +700,7 @@
       "eyebrow": "İletişim",
       "title": "Bize ulaş",
       "paragraph": "Colega hakkında bir sorun mu var, hesabınla ilgili yardıma mı ihtiyacın var, ya da Colega'yı ekibine getirmek mi istiyorsun? Senden haber almak isteriz.",
-      "email": "hello@colega.ai"
+      "email": "support@colegapro.com"
     }
   }
 }

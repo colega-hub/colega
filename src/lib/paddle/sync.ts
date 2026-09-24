@@ -81,7 +81,9 @@ async function findExistingRow(
   return null;
 }
 
-async function applySubscription(sub: PaddleSubscriptionLike, occurredAt: string) {
+// Also called by the account page's cancel/resume actions (src/lib/paddle/billing-actions.ts) with
+// the subscription Paddle just returned, so the card updates without waiting for the webhook.
+export async function applySubscription(sub: PaddleSubscriptionLike, occurredAt: string) {
   const admin = createAdminClient();
   const payloadUserId = userIdFromCustomData(sub.customData);
   const existing = await findExistingRow(admin, payloadUserId, sub.id, sub.customerId);

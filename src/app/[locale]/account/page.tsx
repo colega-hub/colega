@@ -12,6 +12,9 @@ import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { buildMetadata } from "@/lib/seo";
 import { WINDOWS_DOWNLOAD_URL } from "@/lib/download";
+import { getOwnBillingRow, getSubscriptionSummary } from "@/lib/paddle/billing";
+import { SubscriptionCard } from "@/components/account/SubscriptionCard";
+import { CheckoutSuccess } from "@/components/account/CheckoutSuccess";
 
 export async function generateMetadata({
   params,
@@ -43,10 +46,13 @@ type EntitlementRow = {
 
 export default async function AccountPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ checkout?: string }>;
 }) {
   const { locale } = await params;
+  const { checkout } = await searchParams;
   const t = await getTranslations({ locale, namespace: "account" });
 
   // Real, server-side authorization boundary — not just hiding UI. getUser() (not getSession())
@@ -65,7 +71,7 @@ export default async function AccountPage({
   // by RLS at signup time, since there was no session yet) logging in for the first time.
   await ensureProfile(supabase, user);
 
-  const [{ data: profile }, entitlementResult, { data: memberships }] = await Promise.all([
+  const [{ data: profile }, entitlementResult, { data: memberships }, billing] = await Promise.all([
     supabase.from("profiles").select("display_name, username").eq("id", user.id).maybeSingle(),
     supabase.rpc("get_my_entitlement").returns<EntitlementRow[]>().maybeSingle(),
     supabase
@@ -73,7 +79,15 @@ export default async function AccountPage({
       .select("role, organizations(id, name)")
       .eq("user_id", user.id)
       .returns<OrgMembership[]>(),
+    getOwnBillingRow(),
   ]);
+  // Paddle subscription card — only for the user who owns (pays for) a subscription. Company
+  // members on the owner's Teams plan see their plan badge above but no billing controls.
+  const subscription = await getSubscriptionSummary(billing?.row ?? null);
+  const checkoutPlan =
+    subscription && (subscription.status === "active" || subscription.status === "trialing")
+      ? subscription.plan
+      : null;
 
   const displayName = profile?.display_name || user.user_metadata?.full_name || user.email;
   // get_my_entitlement() is SECURITY DEFINER and self-scoped (auth.uid()) — see
@@ -103,6 +117,8 @@ export default async function AccountPage({
           </Reveal>
 
           <div className="mt-10 flex flex-col gap-6">
+            {checkout === "success" && <CheckoutSuccess initialPlan={checkoutPlan} />}
+
             <section className="card-surface rounded-3xl p-6 sm:p-8">
               <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-dim">
                 {t("sections.account")}
@@ -129,6 +145,7 @@ export default async function AccountPage({
                   {t(`plans.${planKey}`)}
                 </span>
               </div>
+              {subscription && <SubscriptionCard summary={subscription} />}
             </section>
 
             <section className="card-surface rounded-3xl p-6 sm:p-8">

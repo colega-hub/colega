@@ -573,7 +573,52 @@
       "admin": "Admin",
       "member": "Member"
     },
-    "logout": "Log out"
+    "logout": "Log out",
+    "billing": {
+      "planNames": {
+        "pro": "Colega Pro",
+        "teams": "Colega Teams"
+      },
+      "seats": "· {count} seats",
+      "perMonth": "month",
+      "perYear": "year",
+      "status": {
+        "active": "Active",
+        "trialing": "Trial",
+        "past_due": "Payment overdue",
+        "cancelled": "Cancelled",
+        "cancelScheduled": "Cancels at period end"
+      },
+      "renews": "Your subscription renews on {date}.",
+      "trialEnds": "Your trial ends on {date}; you will then be charged {amount}.",
+      "trialEndsNoAmount": "Your trial ends on {date}.",
+      "accessUntil": "Your subscription is cancelled. Your access continues until {date}.",
+      "cancelledDetail": "Your subscription has ended.",
+      "pastDueHint": "We could not collect your last payment. Please update your payment method.",
+      "portal": "Payment method / Invoices",
+      "cancel": "Cancel subscription",
+      "resume": "Undo cancellation",
+      "resubscribe": "Choose a plan",
+      "working": "Please wait…",
+      "confirmTitle": "Cancel your subscription?",
+      "confirmBody": "You will not be charged again. You keep full access until {date}, and you can undo the cancellation any time before then.",
+      "confirmKeep": "Keep subscription",
+      "confirmCancel": "Yes, cancel",
+      "errors": {
+        "not_signed_in": "Your session has expired. Please sign in again.",
+        "no_subscription": "No subscription was found for this account.",
+        "not_allowed": "This change is not possible for your subscription right now. Refresh the page and try again.",
+        "unavailable": "Something went wrong. Please try again in a moment or contact support@colegapro.com."
+      }
+    },
+    "checkoutSuccess": {
+      "title": "Your payment was successful",
+      "planActive": "{plan} is now active on your account.",
+      "preparing": "Your account is being prepared…",
+      "slow": "This is taking a little longer than usual. Your plan will appear here shortly — you can safely refresh the page.",
+      "openColega": "Open Colega",
+      "openHint": "Open the Colega desktop app and sign in with this account. Don’t have it yet? Download it on the next page."
+    }
   },
   "download": {
     "badge": "Beta access",
@@ -655,7 +700,7 @@
       "eyebrow": "Contact",
       "title": "Get in touch",
       "paragraph": "Have a question about Colega, need help with your account, or want to talk about bringing Colega to your team? We'd love to hear from you.",
-      "email": "hello@colega.ai"
+      "email": "support@colegapro.com"
     }
   }
 }
