@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Container } from "@/components/ui/Container";
 import { GlowBackground } from "@/components/ui/GlowBackground";
-import { ScreenShareDemo } from "@/components/landing/ScreenShareDemo";
+import { HeroDemo } from "@/components/landing/HeroDemo";
 import { WINDOWS_DOWNLOAD_URL } from "@/lib/download";
 
 export function Hero() {
@@ -89,7 +89,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
             className="relative mx-auto w-full max-w-md lg:max-w-none"
           >
-            <ScreenShareDemo />
+            <HeroDemo />
           </motion.div>
         </div>
       </Container>

@@ -79,22 +79,39 @@
     "ctaWindows": "Download for Windows",
     "ctaMac": "Mac version coming soon",
     "demo": {
-      "inputPlaceholder": "What are you working on?",
-      "shareScreen": "Share screen",
-      "screenShared": "Screen shared",
-      "stopSharing": "Stop sharing",
-      "notification": {
-        "title": "Small thing",
-        "body": "The headline looks slightly misaligned with the section below.",
-        "cta": "Take a look"
+      "ariaLabel": "Colega demo: an email is shared, the user asks for a check by voice and Colega notices the attachment mentioned in the text is missing.",
+      "question": "Can you check this email before I send it?",
+      "panel": {
+        "personal": "Personal",
+        "ready": "Ready",
+        "shared": "Shared",
+        "checking": "Checking your screen…",
+        "shareScreen": "Share Screen",
+        "askPlaceholder": "Ask about this screen…",
+        "listening": "Listening…",
+        "thinking": "Thinking…",
+        "saveAsTask": "Save as Task",
+        "saveAsNote": "Save as Note",
+        "openInColega": "Open in Colega",
+        "dismiss": "Dismiss",
+        "savedAsTask": "Saved as Task"
       },
-      "memory": {
-        "line": "Remember this for later.",
-        "response": "Saved."
+      "result": {
+        "title": "Missing attachment",
+        "body": "The email says “please find our proposal attached”, but nothing is attached."
       },
-      "reminder": {
-        "line": "Remind me about this tomorrow.",
-        "response": "Tomorrow, 10:00"
+      "email": {
+        "window": "New message",
+        "send": "Send",
+        "toLabel": "To",
+        "to": "sarah.mills@northwind.co",
+        "subjectLabel": "Subject",
+        "subject": "Q4 website project proposal",
+        "greeting": "Hi Sarah,",
+        "highlight": "Please find our proposal attached.",
+        "after": "Let me know if you have any questions.",
+        "closing": "Best,",
+        "signature": "Daniel"
       }
     }
   },

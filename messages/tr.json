@@ -79,22 +79,39 @@
     "ctaWindows": "Windows için indir",
     "ctaMac": "Mac sürümü yakında",
     "demo": {
-      "inputPlaceholder": "Şu an ne üzerinde çalışıyorsun?",
-      "shareScreen": "Ekranı paylaş",
-      "screenShared": "Ekran paylaşıldı",
-      "stopSharing": "Paylaşımı durdur",
-      "notification": {
-        "title": "Küçük bir detay",
-        "body": "Başlık, alttaki bölümle biraz hizasız duruyor.",
-        "cta": "Bir bak"
+      "ariaLabel": "Colega demosu: e-posta ekranı paylaşılıyor, kullanıcı sesle kontrol istiyor ve Colega metinde bahsedilen ekin eklenmediğini fark ediyor.",
+      "question": "Bu maili göndermeden önce bir kontrol eder misin?",
+      "panel": {
+        "personal": "Personal",
+        "ready": "Hazır",
+        "shared": "Paylaşıldı",
+        "checking": "Ekran kontrol ediliyor…",
+        "shareScreen": "Ekranı Paylaş",
+        "askPlaceholder": "Bu ekran hakkında sor…",
+        "listening": "Dinliyorum…",
+        "thinking": "Düşünüyor…",
+        "saveAsTask": "Görev Kaydet",
+        "saveAsNote": "Not Kaydet",
+        "openInColega": "Colega’da Aç",
+        "dismiss": "Kapat",
+        "savedAsTask": "Görev olarak kaydedildi"
       },
-      "memory": {
-        "line": "Bunu sonra için hatırla.",
-        "response": "Kaydedildi."
+      "result": {
+        "title": "Ek eksik",
+        "body": "Metinde “ekte teklifimizi gönderiyorum” yazıyor ama e-postada ek yok."
       },
-      "reminder": {
-        "line": "Bunu bana yarın hatırlat.",
-        "response": "Yarın, 10:00"
+      "email": {
+        "window": "Yeni ileti",
+        "send": "Gönder",
+        "toLabel": "Kime",
+        "to": "ayse.kaya@northwind.co",
+        "subjectLabel": "Konu",
+        "subject": "Q4 web projesi teklifi",
+        "greeting": "Merhaba Ayşe Hanım,",
+        "highlight": "Ekte teklifimizi gönderiyorum.",
+        "after": "Sorularınız olursa yazabilirsiniz.",
+        "closing": "İyi çalışmalar,",
+        "signature": "Deniz"
       }
     }
   },
