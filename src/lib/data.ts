@@ -1,13 +1,4 @@
-import type { LucideIcon } from "lucide-react";
 import {
-  Eye,
-  Bell,
-  BrainCircuit,
-  ListChecks,
-  GraduationCap,
-  Monitor,
-  Zap,
-  ShieldCheck,
   Download,
   Share2,
   Rocket,
@@ -27,25 +18,6 @@ export const navItems = [
   { id: "download", href: "/download" },
   { id: "faq", href: "/#faq" },
 ] as const;
-
-export type FeatureKind = "plain" | "nudge" | "memory" | "teach";
-
-export type FeatureItem = {
-  id: string;
-  icon: LucideIcon;
-  kind: FeatureKind;
-};
-
-export const featureItems: FeatureItem[] = [
-  { id: "sees", icon: Eye, kind: "plain" },
-  { id: "nudge", icon: Bell, kind: "nudge" },
-  { id: "memory", icon: BrainCircuit, kind: "memory" },
-  { id: "tasks", icon: ListChecks, kind: "plain" },
-  { id: "teach", icon: GraduationCap, kind: "teach" },
-  { id: "desktop", icon: Monitor, kind: "plain" },
-  { id: "miniPanel", icon: Zap, kind: "plain" },
-  { id: "private", icon: ShieldCheck, kind: "plain" },
-];
 
 export const stepItems = [
   { id: "install", icon: Download },

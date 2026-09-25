@@ -119,60 +119,85 @@
   },
   "features": {
     "eyebrow": "Neden Colega",
-    "title": "Bir yazılımdan çok, bir yedeğe benziyor.",
-    "description": "İstediğinde ekranını paylaş, Colega bağlamı yakalar — detayları hatırlar ve gözden kaçırabileceğin şeyleri, tam işine yarayacağı an fark eder.",
+    "title": "Sana yük değil, destek olan bir çalışma arkadaşı.",
+    "description": "Colega masaüstünde, işinin yanında durur. Sen istediğinde bakar, önemli olanı söyler ve gerisini sana bırakır.",
     "items": {
       "sees": {
-        "title": "Aynı ekranı senle birlikte görür",
-        "description": "Ekranını paylaştığında Colega da seninle birlikte takip eder — kopyala-yapıştır yok, tekrar anlatmak yok."
+        "title": "İstediğinde ekranına bakar",
+        "description": "Ekranını paylaş, “bir bak” de. Kopyalayıp yapıştırmadan, uzun uzun anlatmadan Colega ne üzerinde çalıştığını görür."
       },
-      "nudge": {
-        "kicker": "Bir şey ters göründüğünde sessiz bir dürtme",
-        "title": "Sadece değdiğinde konuşur",
-        "description": "Colega küçük şeyleri fark eder — hizasız bir başlık, tutarsız bir rakam — ve bunu tam doğru anda, bir kez söyler.",
-        "demo": {
-          "before": "Tasarım taslağı",
-          "issue": "Bu sayfada iki farklı fiyat görünüyor",
-          "notification": "Buna bir göz atmak isteyebilirsin"
-        }
+      "flags": {
+        "title": "Önemli olanı söyler",
+        "description": "Eksik bir ek, tutmayan bir rakam, yanlış bir tarih… Colega gerçek hataları öne çıkarır, gereksiz ayrıntıyla vaktini almaz."
       },
-      "memory": {
-        "title": "Önemli olanı hatırlar",
-        "description": "Bir kere söyle, yeter. Haftalar sonra sorduğunda hâlâ orada.",
-        "demo": {
-          "line1": "14 Ekim'de yayına alıyoruz.",
-          "reply1": "Not aldım.",
-          "line2": "Ne zaman yayına alıyorduk?",
-          "reply2": "14 Ekim."
-        }
+      "remembers": {
+        "title": "Tercihlerini unutmaz",
+        "description": "Kişisel kurallarını bir kez yaz. Üslubun, standartların ve dikkat ettiğin noktalar her kontrolde hesaba katılır."
       },
       "tasks": {
-        "title": "Listeni dürüst tutar",
-        "description": "Yapılacaklar, takip edilecekler ve hatırlatmalar — başka bir uygulamaya bakmana gerek kalmadan düzenli."
+        "title": "Görevlerini toparlar",
+        "description": "Bir bulguyu tek tıkla görev ya da not yap. Yapılacaklar ve takip edilecekler tek bir yerde düzenli kalır."
       },
-      "teach": {
-        "title": "Şirketinin kendi işleyiş biçimi",
-        "description": "Herkesin aynı soruyu iki kere sormasına gerek yok. Süreçlerini Colega'ya bir kere öğret, o bilgiyi doğru yerde paylaşsın.",
-        "demo": {
-          "item1": "Marka rehberi",
-          "item2": "İade prosedürü",
-          "item3": "Satış süreci",
-          "badge1": "Doğrulandı",
-          "badge2": "Şirket kuralı",
-          "badge3": "Doğrulandı"
+      "learns": {
+        "title": "Şirketinin işleyişini öğrenir",
+        "description": "Süreç belgelerini ve iş akışlarını Colega’ya bir kez öğret, ekibindeki herkes aynı bilgiyle çalışsın."
+      },
+      "privacy": {
+        "title": "Sadece paylaştığını görür",
+        "description": "Sen paylaşmadıkça ekranını görmez, ekran görüntüleri saklanmaz. Toplantıdan da sen kaydetmedikçe hiçbir şey tutulmaz."
+      }
+    },
+    "meeting": {
+      "kicker": "Toplantılarda",
+      "title": "Zor bir soruda yalnız kalmazsın.",
+      "description": "Dinleme Modu toplantıyı senin için takip eder. Takıldığın anda “Tavsiye İste”ye bas, ne diyebileceğini hemen gör. Toplantı bitince özeti tek tıkla notlarına kaydet.",
+      "points": [
+        "Toplantı sesini ve istersen mikrofonunu dinler",
+        "Konuşmaya göre o an ne diyebileceğini önerir",
+        "Sen kaydetmedikçe hiçbir şey saklanmaz"
+      ],
+      "demo": {
+        "ariaLabel": "Colega toplantı demosu: Dinleme Modu açılıyor, müşteri fiyatla ilgili zor bir soru soruyor, Colega ne söylenebileceğini öneriyor ve toplantı sonunda özet not olarak kaydediliyor.",
+        "call": {
+          "title": "Northwind · Haftalık görüşme",
+          "client": "Elif Demir · Northwind",
+          "selfInitials": "DK",
+          "ended": "Görüşme sona erdi"
+        },
+        "caption": {
+          "speaker": "Elif",
+          "text": "Fiyatınız rakiplerden yüksek görünüyor, bunu nasıl açıklarsınız?"
+        },
+        "panel": {
+          "personal": "Personal",
+          "ready": "Hazır",
+          "listening": "Dinliyor",
+          "shareScreen": "Ekranı Paylaş",
+          "hint": "Önce bir ekran paylaş",
+          "sources": "Toplantı sesi + mikrofonun",
+          "askAdvice": "Tavsiye İste",
+          "adviceHeader": "Tavsiye",
+          "thinking": "Düşünüyor…",
+          "youCouldSay": "Şöyle diyebilirsin",
+          "endedTitle": "Dinleme bitti",
+          "endedBody": "Kaydetmedikçe bu toplantıdan hiçbir şey saklanmaz.",
+          "saveSummary": "Özeti not olarak kaydet",
+          "discard": "Sil",
+          "summarySaved": "Özet Notlar’a kaydedildi"
+        },
+        "advice": {
+          "headline": "Fiyatı değil, sağladığı değeri konuş.",
+          "line": "Haklısınız, ilk bakışta daha yüksek görünüyor. Ama kurulum, ekip eğitimi ve 7/24 destek fiyata dahil; rakiplerde bunlar ayrıca ücretleniyor. Ekibinizin kazanacağı zamanla yatırım ilk yılda kendini geri ödüyor."
+        },
+        "note": {
+          "app": "Notlar",
+          "title": "Toplantı notları — Northwind",
+          "summaryLabel": "Özet",
+          "summary1": "Elif fiyatı rakiplerle karşılaştırdı; dahil olan hizmetler ve ilk yıldaki kazanç anlatıldı.",
+          "summary2": "Northwind pilot çalışmaya sıcak bakıyor.",
+          "tasksLabel": "Taahhütler ve görevler",
+          "task": "Cuma’ya kadar Elif’e karşılaştırmalı teklif gönder"
         }
-      },
-      "desktop": {
-        "title": "Masaüstünün bir parçası gibi",
-        "description": "Windows ve Mac için hızlı, native bir uygulama — bir tarayıcı sekmesi değil."
-      },
-      "miniPanel": {
-        "title": "Bir kısayol uzağında",
-        "description": "Küçük bir paneli anında çağır, ihtiyacını al, işine geri dön."
-      },
-      "private": {
-        "title": "Ekranın, senin kararın",
-        "description": "Colega sadece paylaşmayı seçtiğin şeyi görür. Sen bilmeden hiçbir şey kaydedilmez, hiçbir şey satılmaz."
       }
     }
   },

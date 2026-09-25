@@ -119,60 +119,85 @@
   },
   "features": {
     "eyebrow": "Why Colega",
-    "title": "Less like software. More like backup.",
-    "description": "Share your screen when you want it, and Colega follows along — remembering details and catching what you'd miss, right when it matters.",
+    "title": "A teammate that lightens the load.",
+    "description": "Colega sits on your desktop, right next to your work. It looks when you ask, tells you what matters and leaves the rest to you.",
     "items": {
       "sees": {
-        "title": "Sees the same screen you do",
-        "description": "When you share your screen, Colega follows along — no copy-pasting, no re-explaining what you're working on."
+        "title": "Looks when you ask",
+        "description": "Share your screen and ask Colega to take a look. No copy-pasting, no long explanations: it sees what you’re working on."
       },
-      "nudge": {
-        "kicker": "A quiet nudge when something looks off",
-        "title": "Speaks up only when it's worth it",
-        "description": "Colega notices the small things — a misaligned headline, a mismatched number — and mentions them once, at the right moment.",
-        "demo": {
-          "before": "Design draft",
-          "issue": "Two prices shown on this page",
-          "notification": "You might want to check this"
-        }
+      "flags": {
+        "title": "Tells you what matters",
+        "description": "A missing attachment, a number that doesn’t add up, a wrong date… Colega surfaces real mistakes and doesn’t waste your time on trivia."
       },
-      "memory": {
-        "title": "Remembers what matters",
-        "description": "Tell it something once. Ask about it weeks later. It's still there.",
-        "demo": {
-          "line1": "We're launching on October 14.",
-          "reply1": "Got it.",
-          "line2": "When are we launching?",
-          "reply2": "October 14."
-        }
+      "remembers": {
+        "title": "Remembers how you work",
+        "description": "Write your personal rules once. Your tone, your standards and the things you care about are considered in every check."
       },
       "tasks": {
-        "title": "Keeps your list honest",
-        "description": "To-dos, follow-ups, and reminders — organized without another app to check."
+        "title": "Keeps your tasks in order",
+        "description": "Turn any finding into a task or note in one click. To-dos and follow-ups stay organized in one place."
       },
-      "teach": {
-        "title": "Your company's way of doing things",
-        "description": "Everyone shouldn't have to ask the same questions twice. Teach Colega your processes once, and it passes that knowledge on.",
-        "demo": {
-          "item1": "Brand guidelines",
-          "item2": "Refund procedure",
-          "item3": "Sales process",
-          "badge1": "Verified",
-          "badge2": "Company rule",
-          "badge3": "Verified"
+      "learns": {
+        "title": "Learns how your company works",
+        "description": "Teach Colega your process documents and workflows once, so everyone on your team works from the same knowledge."
+      },
+      "privacy": {
+        "title": "Only sees what you share",
+        "description": "It can’t see your screen unless you share it, and screenshots aren’t stored. Nothing from a meeting is kept unless you save it."
+      }
+    },
+    "meeting": {
+      "kicker": "In meetings",
+      "title": "Never stuck on a tough question.",
+      "description": "Hear Mode follows the meeting for you. When you’re stuck, hit “Ask for Advice” and see what you could say right away. When it’s over, save the summary to your notes in one click.",
+      "points": [
+        "Listens to the meeting audio and, if you want, your mic",
+        "Suggests what you could say, based on the conversation",
+        "Nothing is kept unless you save it"
+      ],
+      "demo": {
+        "ariaLabel": "Colega meeting demo: Hear Mode starts, the client asks a tough pricing question, Colega suggests what to say and the summary is saved as a note after the meeting.",
+        "call": {
+          "title": "Northwind · Weekly call",
+          "client": "Emily Dean · Northwind",
+          "selfInitials": "DK",
+          "ended": "Call ended"
+        },
+        "caption": {
+          "speaker": "Emily",
+          "text": "Your price looks higher than your competitors’. How do you justify that?"
+        },
+        "panel": {
+          "personal": "Personal",
+          "ready": "Ready",
+          "listening": "Listening",
+          "shareScreen": "Share Screen",
+          "hint": "Share a screen first",
+          "sources": "Meeting audio + your mic",
+          "askAdvice": "Ask for Advice",
+          "adviceHeader": "Advice",
+          "thinking": "Thinking…",
+          "youCouldSay": "You could say",
+          "endedTitle": "Hear Mode ended",
+          "endedBody": "Nothing from this meeting is kept unless you save it.",
+          "saveSummary": "Save summary as note",
+          "discard": "Discard",
+          "summarySaved": "Summary saved to Notes"
+        },
+        "advice": {
+          "headline": "Talk about value, not price.",
+          "line": "Fair point, it does look higher at first. But setup, team training and 24/7 support are included, while others charge for them separately. With the time your team saves, it pays for itself in the first year."
+        },
+        "note": {
+          "app": "Notes",
+          "title": "Meeting notes — Northwind",
+          "summaryLabel": "Summary",
+          "summary1": "Emily compared our price with competitors; we walked through what’s included and the first-year return.",
+          "summary2": "Northwind is open to a pilot.",
+          "tasksLabel": "Commitments & action items",
+          "task": "Send Emily a side-by-side proposal by Friday"
         }
-      },
-      "desktop": {
-        "title": "Feels like part of your desktop",
-        "description": "A fast, native app for Windows and Mac — not another browser tab."
-      },
-      "miniPanel": {
-        "title": "One shortcut away",
-        "description": "Summon a small panel instantly, get what you need, and get back to work."
-      },
-      "private": {
-        "title": "Your screen, your call",
-        "description": "Colega only sees what you choose to share. Nothing recorded without you knowing, nothing sold."
       }
     }
   },
