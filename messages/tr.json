@@ -953,5 +953,32 @@
         }
       ]
     }
+  },
+  "smartscreen": {
+    "eyebrow": "Kurulumdan önce",
+    "title": "Windows bir uyarı gösterebilir",
+    "close": "Kapat",
+    "captions": {
+      "appear": "Kurulum dosyasını açtığınızda bu ekran çıkabilir.",
+      "more": "1. “Ek bilgi”ye tıklayın.",
+      "run": "2. “Yine de çalıştır”a basın.",
+      "done": "Hepsi bu, Colega kurulmaya başlar.",
+      "reduced": "“Ek bilgi”ye tıklayın, ardından “Yine de çalıştır”a basın."
+    },
+    "replay": "Tekrar izle",
+    "body": "Colega yeni bir uygulama olduğu için Windows onu henüz tanımıyor. Bu bir güvenlik sorunu değil; Microsoft Store yayını üzerinde çalışıyoruz, bu uyarı yakında kalkacak.",
+    "support": "Sorunuz mu var? <email>support@colegapro.com</email> adresine yazın.",
+    "download": "Anladım, indir",
+    "window": {
+      "title": "Windows kişisel bilgisayarınızı korudu",
+      "body": "Microsoft Defender SmartScreen tanınmayan bir uygulamanın başlatılmasını engelledi. Bu uygulamanın çalıştırılması bilgisayarınızı riske atabilir.",
+      "moreInfo": "Ek bilgi",
+      "app": "Uygulama:",
+      "publisher": "Yayımcı:",
+      "unknownPublisher": "Bilinmeyen yayımcı",
+      "runAnyway": "Yine de çalıştır",
+      "dontRun": "Çalıştırma",
+      "installing": "Kurulum başlıyor"
+    }
   }
 }

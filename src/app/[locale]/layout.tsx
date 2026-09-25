@@ -7,6 +7,7 @@ import { MotionConfig } from "framer-motion";
 import { routing } from "@/i18n/routing";
 import { localeAlternates } from "@/i18n/alternates";
 import { siteUrl } from "@/lib/supabase/site-url";
+import { SmartScreenGuide } from "@/components/download/SmartScreenGuide";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -65,7 +66,10 @@ export default async function LocaleLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-accent">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <MotionConfig reducedMotion="user">{children}</MotionConfig>
+          <MotionConfig reducedMotion="user">
+            {children}
+            <SmartScreenGuide />
+          </MotionConfig>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -953,5 +953,32 @@
         }
       ]
     }
+  },
+  "smartscreen": {
+    "eyebrow": "Before you install",
+    "title": "Windows may show a warning",
+    "close": "Close",
+    "captions": {
+      "appear": "When you open the installer, this screen may appear.",
+      "more": "1. Click “More info”.",
+      "run": "2. Click “Run anyway”.",
+      "done": "That’s it, Colega starts installing.",
+      "reduced": "Click “More info”, then click “Run anyway”."
+    },
+    "replay": "Watch again",
+    "body": "Colega is a new app, so Windows doesn’t recognise it yet. This is not a security problem; we’re working on publishing to the Microsoft Store, and this warning will go away soon.",
+    "support": "Questions? Write to <email>support@colegapro.com</email>.",
+    "download": "Got it, download",
+    "window": {
+      "title": "Windows protected your PC",
+      "body": "Microsoft Defender SmartScreen prevented an unrecognized app from starting. Running this app might put your PC at risk.",
+      "moreInfo": "More info",
+      "app": "App:",
+      "publisher": "Publisher:",
+      "unknownPublisher": "Unknown publisher",
+      "runAnyway": "Run anyway",
+      "dontRun": "Don’t run",
+      "installing": "Installation starting"
+    }
   }
 }
