@@ -80,7 +80,6 @@
     "ctaMac": "Mac version coming soon",
     "demo": {
       "ariaLabel": "Colega demo: an email is shared, the user asks for a check by voice and Colega notices the attachment mentioned in the text is missing.",
-      "question": "Can you check this email before I send it?",
       "panel": {
         "personal": "Personal",
         "ready": "Ready",

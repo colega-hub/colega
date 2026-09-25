@@ -27,9 +27,6 @@ type Phase =
   | "toMic"
   | "clickMic"
   | "listening"
-  | "transcribing"
-  | "toSend"
-  | "clickSend"
   | "checking"
   | "result"
   | "toTask"
@@ -45,20 +42,17 @@ const TIMELINE: [Phase, number][] = [
   ["toMic", 2900],
   ["clickMic", 3750],
   ["listening", 3900],
-  ["transcribing", 4400],
-  ["toSend", 6900],
-  ["clickSend", 7550],
-  ["checking", 7700],
-  ["result", 9200],
-  ["toTask", 10500],
-  ["clickTask", 11350],
-  ["saved", 11500],
-  ["reset", 13100],
+  ["checking", 6100],
+  ["result", 7600],
+  ["toTask", 8900],
+  ["clickTask", 9750],
+  ["saved", 9900],
+  ["reset", 11500],
 ];
-const LOOP_MS = 14300;
+const LOOP_MS = 12700;
 const ORDER = TIMELINE.map(([p]) => p);
 
-type Target = "rest" | "share" | "mic" | "send" | "task";
+type Target = "rest" | "share" | "mic" | "task";
 const REST = { x: 470, y: 118 };
 
 export function HeroDemo() {
@@ -112,26 +106,23 @@ export function HeroDemo() {
   const at = (p: Phase) => ORDER.indexOf(phase) >= ORDER.indexOf(p) && phase !== "reset";
 
   const shared = at("shared");
-  const micOn = phase === "clickMic" || phase === "listening" || phase === "transcribing";
-  const showTranscript = at("transcribing");
-  // Speech caption: the full sentence while the user is speaking, gone once it is sent.
-  const speaking = !reduceMotion && (phase === "listening" || phase === "transcribing" || phase === "toSend" || phase === "clickSend");
+  // As in the app: a spoken question is transcribed and checked automatically — it is never typed
+  // into the input and there is no send click.
+  const micOn = phase === "clickMic" || phase === "listening";
   const checking = phase === "checking";
   const showResult = at("result");
   const saved = at("saved");
   const pressing: Target | null =
-    phase === "clickShare" ? "share" : phase === "clickMic" ? "mic" : phase === "clickSend" ? "send" : phase === "clickTask" ? "task" : null;
+    phase === "clickShare" ? "share" : phase === "clickMic" ? "mic" : phase === "clickTask" ? "task" : null;
 
   let target: Target = "rest";
   if (at("toTask")) target = "task";
-  else if (at("toSend")) target = "send";
   else if (at("toMic")) target = "mic";
   else if (at("toShare")) target = "share";
 
   // --- pointer targets, measured in design units (independent of the current scale) ---
   const shareRef = useRef<HTMLSpanElement>(null);
   const micRef = useRef<HTMLSpanElement>(null);
-  const sendRef = useRef<HTMLSpanElement>(null);
   const taskRef = useRef<HTMLSpanElement>(null);
   const [points, setPoints] = useState<Partial<Record<Target, { x: number; y: number }>>>({});
   const measure = useCallback(() => {
@@ -140,8 +131,8 @@ export function HeroDemo() {
     const k = stage.width / W;
     setPoints((prev) => {
       const nextPoints = { ...prev };
-      const elements = { share: shareRef.current, mic: micRef.current, send: sendRef.current, task: taskRef.current };
-      for (const key of ["share", "mic", "send", "task"] as const) {
+      const elements = { share: shareRef.current, mic: micRef.current, task: taskRef.current };
+      for (const key of ["share", "mic", "task"] as const) {
         const el = elements[key];
         if (!el) continue;
         const r = el.getBoundingClientRect();
@@ -157,7 +148,6 @@ export function HeroDemo() {
   const pointer = target === "rest" ? REST : (points[target] ?? REST);
   const ripplePoint = pressing ? points[pressing] : undefined;
 
-  const words = t("question").split(" ");
 
   return (
     <div
@@ -242,41 +232,6 @@ export function HeroDemo() {
             )}
           </AnimatePresence>
         </div>
-
-        {/* ---------------- Speech caption ---------------- */}
-        <AnimatePresence>
-          {speaking && (
-            <motion.div
-              className="absolute left-[234px] top-[88px] z-[5] flex max-w-[300px] items-start gap-2 rounded-2xl rounded-bl-md border border-white/10 bg-[#1b1d2b]/95 px-3 py-2 text-[12.5px] leading-snug text-white shadow-[0_12px_30px_-10px_rgba(0,0,0,0.7)]"
-              initial={{ opacity: 0, y: 6, scale: 0.97 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -4 }}
-              transition={{ duration: 0.25, ease: [0.2, 0.7, 0.2, 1] }}
-            >
-              <motion.span
-                className="mt-[5px] h-2 w-2 shrink-0 rounded-full bg-[#ff6b6b]"
-                animate={{ opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
-              />
-              <span>
-                {showTranscript ? (
-                  words.map((word, i) => (
-                    <motion.span
-                      key={i}
-                      initial={{ opacity: 0, filter: "blur(3px)" }}
-                      animate={{ opacity: 1, filter: "blur(0px)" }}
-                      transition={{ delay: i * 0.24, duration: 0.25 }}
-                    >
-                      {word}{" "}
-                    </motion.span>
-                  ))
-                ) : (
-                  <span className="italic text-white/60">{t("panel.listening")}</span>
-                )}
-              </span>
-            </motion.div>
-          )}
-        </AnimatePresence>
 
         {/* ---------------- Mini Panel ---------------- */}
         <div
@@ -401,20 +356,7 @@ export function HeroDemo() {
                 transition={{ duration: 0.25 }}
               >
                 <div className="flex h-8 min-w-0 flex-1 items-center overflow-hidden px-1.5 text-[12.5px]">
-                  {showTranscript ? (
-                    <span className="truncate text-[#eef0f6]">
-                      {words.map((word, i) => (
-                        <motion.span
-                          key={i}
-                          initial={reduceMotion ? false : { opacity: 0, filter: "blur(3px)" }}
-                          animate={{ opacity: 1, filter: "blur(0px)" }}
-                          transition={{ delay: i * 0.24, duration: 0.25 }}
-                        >
-                          {word}{" "}
-                        </motion.span>
-                      ))}
-                    </span>
-                  ) : micOn ? (
+                  {micOn ? (
                     <span className="flex items-center gap-2 italic text-[#a3a6b6]">
                       {t("panel.listening")}
                       <LevelBars />
@@ -424,11 +366,8 @@ export function HeroDemo() {
                   )}
                 </div>
                 <motion.span
-                  ref={sendRef}
                   className="flex h-7 w-7 shrink-0 items-center justify-center rounded-[9px] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25)]"
                   style={{ background: BRAND }}
-                  animate={{ scale: pressing === "send" ? 0.9 : 1 }}
-                  transition={{ duration: 0.12 }}
                 >
                   <Svg size={13}>
                     <path d="M12 19V5" />
@@ -598,16 +537,16 @@ function CheckBtn({
   );
 }
 
-/** Small live input-level bars shown while the microphone is listening. */
+/** Live voice wave shown while the microphone is listening (the user is speaking). */
 function LevelBars() {
   return (
-    <span className="flex h-3 items-end gap-[2px]">
-      {[0, 1, 2, 3].map((i) => (
+    <span className="flex h-4 items-center gap-[3px]">
+      {[0, 1, 2, 3, 4, 5, 6].map((i) => (
         <motion.span
           key={i}
-          className="w-[2px] rounded-full bg-[#ff6b6b]"
-          animate={{ height: ["30%", "100%", "45%", "80%", "30%"] }}
-          transition={{ duration: 0.9, repeat: Infinity, delay: i * 0.12, ease: "easeInOut" }}
+          className="w-[2.5px] rounded-full bg-[#ff6b6b]"
+          animate={{ height: ["25%", "100%", "40%", "85%", "25%"] }}
+          transition={{ duration: 0.8 + (i % 3) * 0.15, repeat: Infinity, delay: i * 0.09, ease: "easeInOut" }}
         />
       ))}
     </span>

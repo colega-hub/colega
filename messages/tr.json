@@ -80,7 +80,6 @@
     "ctaMac": "Mac sürümü yakında",
     "demo": {
       "ariaLabel": "Colega demosu: e-posta ekranı paylaşılıyor, kullanıcı sesle kontrol istiyor ve Colega metinde bahsedilen ekin eklenmediğini fark ediyor.",
-      "question": "Bu maili göndermeden önce bir kontrol eder misin?",
       "panel": {
         "personal": "Personal",
         "ready": "Hazır",
